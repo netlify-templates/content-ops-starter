@@ -1,0 +1,65 @@
+{
+    "model": "GenericSection",
+    "presets": [
+        {
+            "label": "Feature section, image right",
+            "locale": null,
+            "data": {
+                "title": {
+                    "text": "Social Media Management",
+                    "color": "text-dark",
+                    "styles": null,
+                    "$$type": "TitleBlock"
+                },
+                "subtitle": "Increase your reach",
+                "text": "A service that helps businesses to manage their social media accounts and posts.\n",
+                "actions": [
+                    {
+                        "label": "Get started",
+                        "altText": null,
+                        "url": "/",
+                        "showIcon": null,
+                        "icon": "arrowRight",
+                        "iconPosition": "right",
+                        "style": "secondary",
+                        "elementId": null,
+                        "$$type": "Button"
+                    },
+                    {
+                        "label": "See Tutorials",
+                        "altText": null,
+                        "url": "/",
+                        "showIcon": true,
+                        "icon": "arrowRight",
+                        "iconPosition": "right",
+                        "style": "primary",
+                        "elementId": null,
+                        "$$type": "Link"
+                    }
+                ],
+                "media": {
+                    "url": "/images/hero2.svg",
+                    "altText": "Fun feature preview",
+                    "elementId": null,
+                    "styles": null,
+                    "$$type": "ImageBlock"
+                },
+                "badge": {
+                    "label": "This is a badge",
+                    "color": "text-primary",
+                    "styles": null,
+                    "$$type": "Badge"
+                },
+                "elementId": null,
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "alignItems": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/generic-section-feature-section-image-right-8358.png"
+        }
+    ]
+}

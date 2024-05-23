@@ -1,0 +1,15 @@
+{
+  "model": "Social",
+  "presets": [
+    {
+      "label": "Email icon",
+      "thumbnail": "images/social-email-icon-0bae.png",
+      "data": {
+        "altText": "Email icon",
+        "url": "/",
+        "icon": "mail",
+        "elementId": ""
+      }
+    }
+  ]
+}

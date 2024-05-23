@@ -1,0 +1,39 @@
+{
+    "model": "RecentPostsSection",
+    "presets": [
+        {
+            "label": "Recent posts, grid",
+            "locale": null,
+            "data": {
+                "title": {
+                    "text": "Recent posts",
+                    "color": "text-dark",
+                    "styles": {
+                        "self": {
+                            "textAlign": "center"
+                        }
+                    },
+                    "$$type": "TitleBlock"
+                },
+                "subtitle": null,
+                "recentCount": 3,
+                "showThumbnail": true,
+                "showExcerpt": true,
+                "showDate": true,
+                "showAuthor": true,
+                "actions": [],
+                "badge": null,
+                "elementId": "",
+                "variant": "three-col-grid",
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "justifyContent": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/recent-posts-section-recent-posts-grid-71ec.png"
+        }
+    ]
+}

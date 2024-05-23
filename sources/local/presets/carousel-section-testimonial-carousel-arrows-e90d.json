@@ -1,0 +1,99 @@
+{
+    "model": "CarouselSection",
+    "presets": [
+        {
+            "label": "Testimonial carousel, arrows",
+            "locale": null,
+            "data": {
+                "title": null,
+                "subtitle": "This is a subtitle",
+                "items": [
+                    {
+                        "title": "“A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away.”",
+                        "tagline": "Testimonial 1",
+                        "subtitle": "Maria Walters, Company",
+                        "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                        "image": {
+                            "url": "/images/person-placeholder-light.png",
+                            "altText": "Maria Walters",
+                            "elementId": null,
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "full"
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-neutralAlt-fg-dark",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-9",
+                                    "pb-9",
+                                    "pl-9",
+                                    "pr-9"
+                                ],
+                                "textAlign": "left",
+                                "borderRadius": "large",
+                                "flexDirection": "row",
+                                "justifyContent": "center"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    },
+                    {
+                        "title": "“Quote from some important person goes right here. I love using Netlify.”",
+                        "tagline": "Testimonial 2",
+                        "subtitle": "Jane Doe, Company",
+                        "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                        "image": {
+                            "url": "/images/img-placeholder-dark.png",
+                            "altText": "Jane Doe",
+                            "elementId": null,
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "full"
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-dark-fg-light",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-9",
+                                    "pb-9",
+                                    "pl-9",
+                                    "pr-9"
+                                ],
+                                "textAlign": "left",
+                                "borderRadius": "large",
+                                "flexDirection": "row",
+                                "justifyContent": "center"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    }
+                ],
+                "badge": null,
+                "elementId": null,
+                "variant": "next-prev-nav",
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "justifyContent": "center"
+                    },
+                    "subtitle": {
+                        "textAlign": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/carousel-section-testimonial-carousel-arrows-e90d.png"
+        }
+    ]
+}

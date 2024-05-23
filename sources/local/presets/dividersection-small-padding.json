@@ -1,0 +1,24 @@
+{
+  "model": "DividerSection",
+  "presets": [
+    {
+      "label": "Small padding",
+      "thumbnail": "images/divider-section-small-padding-2a1b.png",
+      "data": {
+        "title": "Divider",
+        "elementId": "",
+        "colors": "bg-light-fg-dark",
+        "styles": {
+          "self": {
+            "padding": [
+              "pt-3",
+              "pl-3",
+              "pb-3",
+              "pr-3"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

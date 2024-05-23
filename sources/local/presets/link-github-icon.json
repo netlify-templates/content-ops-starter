@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "GitHub icon",
+      "thumbnail": "images/link-github-icon-3beb.png",
+      "data": {
+        "label": null,
+        "altText": "GitHub",
+        "url": "/",
+        "showIcon": true,
+        "icon": "github",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

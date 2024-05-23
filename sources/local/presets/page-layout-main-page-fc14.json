@@ -1,0 +1,917 @@
+{
+    "model": "PageLayout",
+    "presets": [
+        {
+            "label": "Main page",
+            "locale": null,
+            "data": {
+                "title": "Home",
+                "slug": "/",
+                "sections": [
+                    {
+                        "title": {
+                            "text": "Unblock your team boost your time to production",
+                            "color": "text-dark",
+                            "styles": null,
+                            "$$type": "TitleBlock"
+                        },
+                        "subtitle": "Subtitle goes here",
+                        "text": "A Netlify website is a git repo that you own. Every code commit is instantly reflected in the visual editor and since every visual edit is a git commit, git workflows and collaboration just work.\n",
+                        "actions": [
+                            {
+                                "label": "Get started",
+                                "altText": "",
+                                "url": "/",
+                                "showIcon": false,
+                                "icon": "arrowRight",
+                                "iconPosition": "right",
+                                "style": "secondary",
+                                "elementId": "",
+                                "$$type": "Button"
+                            },
+                            {
+                                "label": "See Tutorials",
+                                "altText": "",
+                                "url": "/",
+                                "showIcon": true,
+                                "icon": "arrowRight",
+                                "iconPosition": "right",
+                                "style": "primary",
+                                "elementId": "",
+                                "$$type": "Link"
+                            }
+                        ],
+                        "media": {
+                            "url": "/images/main-hero.svg",
+                            "altText": "Unblock your team boost your time to production preview",
+                            "elementId": "",
+                            "styles": null,
+                            "$$type": "ImageBlock"
+                        },
+                        "badge": {
+                            "label": "This is a badge",
+                            "color": "text-primary",
+                            "styles": null,
+                            "$$type": "Badge"
+                        },
+                        "elementId": "",
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "alignItems": "center",
+                                "flexDirection": "row",
+                                "padding": [
+                                    "pt-16",
+                                    "pl-16",
+                                    "pb-16",
+                                    "pr-16"
+                                ]
+                            }
+                        },
+                        "$$type": "GenericSection"
+                    },
+                    {
+                        "title": {
+                            "text": "Key Benefits",
+                            "color": "text-dark",
+                            "styles": {
+                                "self": {
+                                    "textAlign": "center"
+                                }
+                            },
+                            "$$type": "TitleBlock"
+                        },
+                        "subtitle": "Subtitle goes here",
+                        "items": [
+                            {
+                                "title": "500k",
+                                "tagline": null,
+                                "subtitle": "Numbers Done",
+                                "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                                "image": {
+                                    "url": "/images/icon1.svg",
+                                    "altText": "Placeholder image",
+                                    "elementId": "",
+                                    "styles": {
+                                        "self": {
+                                            "borderRadius": "x-large"
+                                        }
+                                    },
+                                    "$$type": "ImageBlock"
+                                },
+                                "actions": [],
+                                "elementId": null,
+                                "colors": "bg-neutralAlt-fg-dark",
+                                "styles": {
+                                    "self": {
+                                        "padding": [
+                                            "pt-8",
+                                            "pl-8",
+                                            "pb-8",
+                                            "pr-8"
+                                        ],
+                                        "borderRadius": "x-large",
+                                        "flexDirection": "row",
+                                        "justifyContent": "center",
+                                        "textAlign": "left"
+                                    }
+                                },
+                                "$$type": "FeaturedItem"
+                            },
+                            {
+                                "title": "20x",
+                                "tagline": null,
+                                "subtitle": "The Job Stuff",
+                                "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                                "image": {
+                                    "url": "/images/icon2.svg",
+                                    "altText": "Placeholder image",
+                                    "elementId": "",
+                                    "styles": null,
+                                    "$$type": "ImageBlock"
+                                },
+                                "actions": [],
+                                "elementId": null,
+                                "colors": "bg-neutralAlt-fg-dark",
+                                "styles": {
+                                    "self": {
+                                        "padding": [
+                                            "pt-8",
+                                            "pl-8",
+                                            "pb-8",
+                                            "pr-8"
+                                        ],
+                                        "borderRadius": "x-large",
+                                        "flexDirection": "row",
+                                        "textAlign": "left",
+                                        "justifyContent": "center"
+                                    }
+                                },
+                                "$$type": "FeaturedItem"
+                            },
+                            {
+                                "title": "200%",
+                                "tagline": null,
+                                "subtitle": "Faster",
+                                "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                                "image": {
+                                    "url": "/images/icon3.svg",
+                                    "altText": "Placeholder image",
+                                    "elementId": "",
+                                    "styles": null,
+                                    "$$type": "ImageBlock"
+                                },
+                                "actions": [],
+                                "elementId": null,
+                                "colors": "bg-neutralAlt-fg-dark",
+                                "styles": {
+                                    "self": {
+                                        "padding": [
+                                            "pt-8",
+                                            "pl-8",
+                                            "pb-8",
+                                            "pr-8"
+                                        ],
+                                        "borderRadius": "x-large",
+                                        "flexDirection": "row"
+                                    }
+                                },
+                                "$$type": "FeaturedItem"
+                            }
+                        ],
+                        "actions": [
+                            {
+                                "label": "Get started",
+                                "altText": "",
+                                "url": "/",
+                                "showIcon": false,
+                                "icon": "arrowRight",
+                                "iconPosition": "right",
+                                "style": "primary",
+                                "elementId": "",
+                                "$$type": "Button"
+                            }
+                        ],
+                        "badge": {
+                            "label": "This is a badge",
+                            "color": "text-primary",
+                            "styles": {
+                                "self": {
+                                    "textAlign": "center"
+                                }
+                            },
+                            "$$type": "Badge"
+                        },
+                        "elementId": "",
+                        "variant": "three-col-grid",
+                        "colors": "bg-neutral-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pb-16",
+                                    "pt-16",
+                                    "pl-16",
+                                    "pr-16"
+                                ],
+                                "justifyContent": "center"
+                            },
+                            "subtitle": {
+                                "textAlign": "center"
+                            }
+                        },
+                        "$$type": "FeaturedItemsSection"
+                    },
+                    {
+                        "title": null,
+                        "subtitle": "Award winning enterprises trust us",
+                        "images": [
+                            {
+                                "url": "/images/empathy-logo.svg",
+                                "altText": "Empathy logo",
+                                "elementId": null,
+                                "styles": null,
+                                "$$type": "ImageBlock"
+                            },
+                            {
+                                "url": "/images/wellster-logo.svg",
+                                "altText": "Wellster logo",
+                                "elementId": null,
+                                "styles": null,
+                                "$$type": "ImageBlock"
+                            },
+                            {
+                                "url": "/images/vise-logo.svg",
+                                "altText": "Vise logo",
+                                "elementId": null,
+                                "styles": null,
+                                "$$type": "ImageBlock"
+                            },
+                            {
+                                "url": "/images/telus-logo.svg",
+                                "altText": "Telus logo",
+                                "elementId": null,
+                                "styles": null,
+                                "$$type": "ImageBlock"
+                            },
+                            {
+                                "url": "/images/contenful-logo.svg",
+                                "altText": "Contentful logo",
+                                "elementId": null,
+                                "styles": null,
+                                "$$type": "ImageBlock"
+                            },
+                            {
+                                "url": "/images/sanity-logo.svg",
+                                "altText": "Sanity logo",
+                                "elementId": null,
+                                "styles": null,
+                                "$$type": "ImageBlock"
+                            },
+                            {
+                                "url": "/images/rangle-logo.svg",
+                                "altText": "Rangle logo",
+                                "elementId": null,
+                                "styles": null,
+                                "$$type": "ImageBlock"
+                            }
+                        ],
+                        "badge": null,
+                        "elementId": null,
+                        "motion": "move-to-left",
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "justifyContent": "center"
+                            },
+                            "subtitle": {
+                                "textAlign": "center"
+                            }
+                        },
+                        "$$type": "ImageGallerySection"
+                    },
+                    {
+                        "title": null,
+                        "subtitle": null,
+                        "posts": [
+                            {
+                                "$$ref": "content/pages/blog/case-study-1.md",
+                                "$$type": "PostLayout"
+                            },
+                            {
+                                "$$ref": "content/pages/blog/case-study-2.md",
+                                "$$type": "PostLayout"
+                            },
+                            {
+                                "$$ref": "content/pages/blog/case-study-3.md",
+                                "$$type": "PostLayout"
+                            }
+                        ],
+                        "showThumbnail": true,
+                        "showExcerpt": null,
+                        "showDate": true,
+                        "showAuthor": true,
+                        "actions": [],
+                        "badge": null,
+                        "elementId": null,
+                        "variant": "three-col-grid",
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-16",
+                                    "pl-16",
+                                    "pb-16",
+                                    "pr-16"
+                                ],
+                                "justifyContent": "center"
+                            }
+                        },
+                        "$$type": "FeaturedPostsSection"
+                    },
+                    {
+                        "title": "Divider",
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-7",
+                                    "pl-7",
+                                    "pb-7",
+                                    "pr-7"
+                                ]
+                            }
+                        },
+                        "$$type": "DividerSection"
+                    },
+                    {
+                        "title": {
+                            "text": "Grow your business 10x faster",
+                            "color": "text-dark",
+                            "styles": {
+                                "self": {
+                                    "textAlign": "center"
+                                }
+                            },
+                            "$$type": "TitleBlock"
+                        },
+                        "subtitle": "This is a subtitle",
+                        "text": "Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.\nAenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet\nerat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat\nvitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.",
+                        "actions": [],
+                        "media": {
+                            "title": "Title of the video",
+                            "url": "/images/placeholder-video.mp4",
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "controls": false,
+                            "aspectRatio": "16:9",
+                            "elementId": null,
+                            "styles": {
+                                "self": {
+                                    "padding": [
+                                        "pt-2",
+                                        "pb-2",
+                                        "pl-2",
+                                        "pr-2"
+                                    ],
+                                    "borderColor": "border-dark",
+                                    "borderStyle": "solid",
+                                    "borderWidth": 1,
+                                    "borderRadius": "large"
+                                }
+                            },
+                            "$$type": "VideoBlock"
+                        },
+                        "badge": {
+                            "label": "Key Benefits",
+                            "color": "text-primary",
+                            "styles": {
+                                "self": {
+                                    "textAlign": "center"
+                                }
+                            },
+                            "$$type": "Badge"
+                        },
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "flexDirection": "col",
+                                "justifyContent": "center"
+                            },
+                            "subtitle": {
+                                "textAlign": "center"
+                            }
+                        },
+                        "$$type": "GenericSection"
+                    },
+                    {
+                        "title": {
+                            "text": "Generic section with a video",
+                            "color": "text-dark",
+                            "styles": {
+                                "self": {
+                                    "textAlign": "left"
+                                }
+                            },
+                            "$$type": "TitleBlock"
+                        },
+                        "subtitle": "Section with a video subtitle",
+                        "text": "Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.\nAenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet\nerat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat\nvitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.",
+                        "actions": [],
+                        "media": {
+                            "title": "Title of the video",
+                            "url": "/images/placeholder-video.mp4",
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "controls": false,
+                            "aspectRatio": "16:9",
+                            "elementId": null,
+                            "styles": {
+                                "self": {
+                                    "padding": [
+                                        "pt-2",
+                                        "pb-2",
+                                        "pl-2",
+                                        "pr-2"
+                                    ],
+                                    "borderColor": "border-dark",
+                                    "borderStyle": "solid",
+                                    "borderWidth": 1,
+                                    "borderRadius": "large"
+                                }
+                            },
+                            "$$type": "VideoBlock"
+                        },
+                        "badge": null,
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "flexDirection": "row",
+                                "justifyContent": "center"
+                            },
+                            "subtitle": {
+                                "textAlign": "left"
+                            }
+                        },
+                        "$$type": "GenericSection"
+                    },
+                    {
+                        "title": {
+                            "text": "Social Media Management",
+                            "color": "text-dark",
+                            "styles": null,
+                            "$$type": "TitleBlock"
+                        },
+                        "subtitle": "Increase your reach",
+                        "text": "A service that helps businesses to manage their social media accounts and posts.\n",
+                        "actions": [
+                            {
+                                "label": "Get started",
+                                "altText": null,
+                                "url": "/",
+                                "showIcon": null,
+                                "icon": "arrowRight",
+                                "iconPosition": "right",
+                                "style": "secondary",
+                                "elementId": null,
+                                "$$type": "Button"
+                            },
+                            {
+                                "label": "See Tutorials",
+                                "altText": null,
+                                "url": "/",
+                                "showIcon": true,
+                                "icon": "arrowRight",
+                                "iconPosition": "right",
+                                "style": "primary",
+                                "elementId": null,
+                                "$$type": "Link"
+                            }
+                        ],
+                        "media": {
+                            "url": "/images/hero2.svg",
+                            "altText": "Fun feature preview",
+                            "elementId": null,
+                            "styles": null,
+                            "$$type": "ImageBlock"
+                        },
+                        "badge": {
+                            "label": "This is a badge",
+                            "color": "text-primary",
+                            "styles": null,
+                            "$$type": "Badge"
+                        },
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "alignItems": "center"
+                            }
+                        },
+                        "$$type": "GenericSection"
+                    },
+                    {
+                        "title": {
+                            "text": "Business Consulting",
+                            "color": "text-dark",
+                            "styles": null,
+                            "$$type": "TitleBlock"
+                        },
+                        "subtitle": "Be in good company",
+                        "text": "A service that provides advice and guidance to startups and small businesses.\n",
+                        "actions": [
+                            {
+                                "label": "Get started",
+                                "altText": null,
+                                "url": "/",
+                                "showIcon": null,
+                                "icon": "arrowRight",
+                                "iconPosition": "right",
+                                "style": "secondary",
+                                "elementId": null,
+                                "$$type": "Button"
+                            },
+                            {
+                                "label": "See Tutorials",
+                                "altText": null,
+                                "url": "/",
+                                "showIcon": true,
+                                "icon": "arrowRight",
+                                "iconPosition": "right",
+                                "style": "primary",
+                                "elementId": null,
+                                "$$type": "Link"
+                            }
+                        ],
+                        "media": {
+                            "url": "/images/hero3.svg",
+                            "altText": "Dope design preview",
+                            "elementId": null,
+                            "styles": null,
+                            "$$type": "ImageBlock"
+                        },
+                        "badge": {
+                            "label": "This is a badge",
+                            "color": "text-primary",
+                            "styles": null,
+                            "$$type": "Badge"
+                        },
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "alignItems": "center",
+                                "flexDirection": "row-reverse"
+                            }
+                        },
+                        "$$type": "GenericSection"
+                    },
+                    {
+                        "title": "Divider",
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-7",
+                                    "pl-7",
+                                    "pb-7",
+                                    "pr-7"
+                                ]
+                            }
+                        },
+                        "$$type": "DividerSection"
+                    },
+                    {
+                        "title": null,
+                        "subtitle": "This is a subtitle",
+                        "items": [
+                            {
+                                "title": "“A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away.”",
+                                "tagline": "Testimonial 1",
+                                "subtitle": "Maria Walters, Company",
+                                "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                                "image": {
+                                    "url": "/images/person-placeholder-light.png",
+                                    "altText": "Maria Walters",
+                                    "elementId": null,
+                                    "styles": {
+                                        "self": {
+                                            "borderRadius": "full"
+                                        }
+                                    },
+                                    "$$type": "ImageBlock"
+                                },
+                                "actions": [],
+                                "elementId": null,
+                                "colors": "bg-neutralAlt-fg-dark",
+                                "styles": {
+                                    "self": {
+                                        "padding": [
+                                            "pt-9",
+                                            "pb-9",
+                                            "pl-9",
+                                            "pr-9"
+                                        ],
+                                        "textAlign": "left",
+                                        "borderRadius": "large",
+                                        "flexDirection": "row",
+                                        "justifyContent": "center"
+                                    }
+                                },
+                                "$$type": "FeaturedItem"
+                            },
+                            {
+                                "title": "“Quote from some important person goes right here. I love using Netlify.”",
+                                "tagline": "Testimonial 2",
+                                "subtitle": "Jane Doe, Company",
+                                "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                                "image": {
+                                    "url": "/images/img-placeholder-dark.png",
+                                    "altText": "Jane Doe",
+                                    "elementId": null,
+                                    "styles": {
+                                        "self": {
+                                            "borderRadius": "full"
+                                        }
+                                    },
+                                    "$$type": "ImageBlock"
+                                },
+                                "actions": [],
+                                "elementId": null,
+                                "colors": "bg-dark-fg-light",
+                                "styles": {
+                                    "self": {
+                                        "padding": [
+                                            "pt-9",
+                                            "pb-9",
+                                            "pl-9",
+                                            "pr-9"
+                                        ],
+                                        "textAlign": "left",
+                                        "borderRadius": "large",
+                                        "flexDirection": "row",
+                                        "justifyContent": "center"
+                                    }
+                                },
+                                "$$type": "FeaturedItem"
+                            }
+                        ],
+                        "badge": null,
+                        "elementId": null,
+                        "variant": "next-prev-nav",
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "justifyContent": "center"
+                            },
+                            "subtitle": {
+                                "textAlign": "center"
+                            }
+                        },
+                        "$$type": "CarouselSection"
+                    },
+                    {
+                        "title": {
+                            "text": "List of features here",
+                            "color": "text-primary",
+                            "styles": {
+                                "self": {
+                                    "textAlign": "center"
+                                }
+                            },
+                            "$$type": "TitleBlock"
+                        },
+                        "subtitle": "Featured items section subtitle",
+                        "items": [
+                            {
+                                "title": "Feature Item One",
+                                "tagline": "This is the tagline",
+                                "subtitle": "This is the item subtitle",
+                                "text": "Follow the tutorial to build your first Netlify site.\n",
+                                "image": {
+                                    "url": "/images/abstract-feature1.svg",
+                                    "altText": "Placholder image",
+                                    "elementId": null,
+                                    "styles": {
+                                        "self": {
+                                            "borderRadius": "x-large"
+                                        }
+                                    },
+                                    "$$type": "ImageBlock"
+                                },
+                                "actions": [],
+                                "elementId": null,
+                                "colors": "bg-light-fg-dark",
+                                "styles": {
+                                    "self": {
+                                        "padding": [
+                                            "pt-8",
+                                            "pl-8",
+                                            "pb-8",
+                                            "pr-8"
+                                        ],
+                                        "borderRadius": "x-large",
+                                        "flexDirection": "col"
+                                    }
+                                },
+                                "$$type": "FeaturedItem"
+                            },
+                            {
+                                "title": "Feature Item Two",
+                                "tagline": "This is the tagline",
+                                "subtitle": "This is the item subtitle",
+                                "text": "Follow the tutorial to build your first awesome Netlify site.\n",
+                                "image": {
+                                    "url": "/images/abstract-feature2.svg",
+                                    "altText": "Placeholder image",
+                                    "elementId": null,
+                                    "styles": {
+                                        "self": {
+                                            "borderRadius": "x-large"
+                                        }
+                                    },
+                                    "$$type": "ImageBlock"
+                                },
+                                "actions": [],
+                                "elementId": null,
+                                "colors": "bg-light-fg-dark",
+                                "styles": {
+                                    "self": {
+                                        "padding": [
+                                            "pt-8",
+                                            "pl-8",
+                                            "pb-8",
+                                            "pr-8"
+                                        ],
+                                        "borderRadius": "x-large",
+                                        "flexDirection": "col"
+                                    }
+                                },
+                                "$$type": "FeaturedItem"
+                            },
+                            {
+                                "title": "Feature Item Three",
+                                "tagline": "This is the tagline",
+                                "subtitle": "This is the item subtitle",
+                                "text": "Learn from the tutorial and build your first awesome Netlify site.\n",
+                                "image": {
+                                    "url": "/images/abstract-feature3.svg",
+                                    "altText": "Placeholder image",
+                                    "elementId": null,
+                                    "styles": {
+                                        "self": {
+                                            "borderRadius": "x-large"
+                                        }
+                                    },
+                                    "$$type": "ImageBlock"
+                                },
+                                "actions": [],
+                                "elementId": null,
+                                "colors": "bg-light-fg-dark",
+                                "styles": {
+                                    "self": {
+                                        "padding": [
+                                            "pt-8",
+                                            "pl-8",
+                                            "pb-8",
+                                            "pr-8"
+                                        ],
+                                        "borderRadius": "x-large",
+                                        "flexDirection": "col"
+                                    }
+                                },
+                                "$$type": "FeaturedItem"
+                            }
+                        ],
+                        "actions": [],
+                        "badge": null,
+                        "elementId": null,
+                        "variant": "three-col-grid",
+                        "colors": "bg-neutral-fg-dark",
+                        "backgroundImage": null,
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-16",
+                                    "pl-8",
+                                    "pb-16",
+                                    "pr-8"
+                                ],
+                                "justifyContent": "center"
+                            },
+                            "subtitle": {
+                                "textAlign": "center"
+                            }
+                        },
+                        "$$type": "FeaturedItemsSection"
+                    },
+                    {
+                        "title": {
+                            "text": "Generic Section With A Form",
+                            "color": "text-dark",
+                            "styles": null,
+                            "$$type": "TitleBlock"
+                        },
+                        "subtitle": "Section with a form subtitle",
+                        "text": "Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.\nAenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet\nerat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat\nvitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.",
+                        "actions": [],
+                        "media": {
+                            "fields": [
+                                {
+                                    "name": "name",
+                                    "label": "Name",
+                                    "hideLabel": true,
+                                    "placeholder": "Your name",
+                                    "isRequired": true,
+                                    "width": "full",
+                                    "$$type": "TextFormControl"
+                                },
+                                {
+                                    "name": "email",
+                                    "label": "Email",
+                                    "hideLabel": true,
+                                    "placeholder": "Your email",
+                                    "isRequired": true,
+                                    "width": "full",
+                                    "$$type": "EmailFormControl"
+                                },
+                                {
+                                    "name": "message",
+                                    "label": "Message",
+                                    "hideLabel": true,
+                                    "placeholder": "Your message",
+                                    "isRequired": null,
+                                    "width": "full",
+                                    "$$type": "TextareaFormControl"
+                                }
+                            ],
+                            "submitButton": {
+                                "label": "Submit",
+                                "showIcon": null,
+                                "icon": "arrowRight",
+                                "iconPosition": "right",
+                                "style": "primary",
+                                "elementId": null,
+                                "$$type": "SubmitButtonFormControl"
+                            },
+                            "action": "/.netlify/functions/submission_created",
+                            "destination": null,
+                            "elementId": "contact-form",
+                            "styles": {
+                                "self": {
+                                    "padding": [
+                                        "pt-6",
+                                        "pb-6",
+                                        "pl-6",
+                                        "pr-6"
+                                    ],
+                                    "borderColor": "border-dark",
+                                    "borderStyle": "solid",
+                                    "borderWidth": 1,
+                                    "borderRadius": "large"
+                                }
+                            },
+                            "$$type": "FormBlock"
+                        },
+                        "badge": {
+                            "label": "Contact Us",
+                            "color": "text-primary",
+                            "styles": null,
+                            "$$type": "Badge"
+                        },
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "backgroundImage": null,
+                        "styles": null,
+                        "$$type": "GenericSection"
+                    }
+                ],
+                "isDraft": null,
+                "seo": {
+                    "metaTitle": "Home - Demo site",
+                    "metaDescription": "This demo site is built with Netlify Create",
+                    "addTitleSuffix": null,
+                    "socialImage": "/images/main-hero.jpg",
+                    "metaTags": [],
+                    "$$type": "Seo"
+                },
+                "markdown_content": ""
+            },
+            "thumbnail": "images/page-layout-main-page-fc14.png"
+        }
+    ]
+}

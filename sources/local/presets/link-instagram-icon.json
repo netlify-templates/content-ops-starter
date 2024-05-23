@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Instagram icon",
+      "thumbnail": "images/link-instagram-icon-a925.png",
+      "data": {
+        "label": null,
+        "altText": "",
+        "url": "/",
+        "showIcon": true,
+        "icon": "instagram",
+        "iconPosition": "right",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

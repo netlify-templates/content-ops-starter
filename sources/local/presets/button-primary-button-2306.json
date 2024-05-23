@@ -1,0 +1,20 @@
+{
+    "model": "Button",
+    "presets": [
+        {
+            "label": "Primary button",
+            "locale": null,
+            "data": {
+                "label": "Get started",
+                "altText": "",
+                "url": "/",
+                "showIcon": false,
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "primary",
+                "elementId": ""
+            },
+            "thumbnail": "images/button-primary-button-2306.png"
+        }
+    ]
+}

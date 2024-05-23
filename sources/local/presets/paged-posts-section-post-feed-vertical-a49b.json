@@ -1,0 +1,29 @@
+{
+    "model": "PagedPostsSection",
+    "presets": [
+        {
+            "label": "Post feed, vertical",
+            "locale": null,
+            "data": {
+                "title": null,
+                "subtitle": null,
+                "showThumbnail": true,
+                "showExcerpt": true,
+                "showDate": true,
+                "showAuthor": true,
+                "actions": [],
+                "badge": null,
+                "elementId": null,
+                "variant": "small-list",
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "justifyContent": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/paged-posts-section-post-feed-vertical-a49b.png"
+        }
+    ]
+}

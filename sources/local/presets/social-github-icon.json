@@ -1,0 +1,15 @@
+{
+  "model": "Social",
+  "presets": [
+    {
+      "label": "GitHub icon",
+      "thumbnail": "images/social-github-icon-c23d.png",
+      "data": {
+        "altText": "GitHub link",
+        "url": "https://github.com/netlify",
+        "icon": "github",
+        "elementId": ""
+      }
+    }
+  ]
+}

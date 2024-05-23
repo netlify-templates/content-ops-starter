@@ -1,0 +1,18 @@
+{
+    "model": "SubmitButtonFormControl",
+    "presets": [
+        {
+            "label": "Submit form with icon",
+            "locale": null,
+            "data": {
+                "label": "Submit",
+                "showIcon": true,
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "primary",
+                "elementId": null
+            },
+            "thumbnail": "images/submit-button-form-control-submit-form-with-icon-4479.png"
+        }
+    ]
+}

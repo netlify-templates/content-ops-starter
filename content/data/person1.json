@@ -1,0 +1,36 @@
+{
+    "name": "Rhonda Piper",
+    "role": "Job title",
+    "image": {
+        "url": "/images/avatar1.svg",
+        "altText": "Rhonda Piper",
+        "styles": {
+            "self": {
+                "borderRadius": "medium",
+                "margin": [
+                    "mb-8"
+                ]
+            }
+        },
+        "type": "ImageBlock"
+    },
+    "colors": "bg-light-fg-dark",
+    "styles": {
+        "self": {
+            "padding": [
+                "pt-6",
+                "pb-6",
+                "pl-6",
+                "pr-6"
+            ],
+            "textAlign": "center",
+            "borderColor": "border-neutral",
+            "borderStyle": "solid",
+            "borderWidth": 0,
+            "borderRadius": "none",
+            "justifyContent": "center"
+        }
+    },
+    "type": "Person",
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n"
+}

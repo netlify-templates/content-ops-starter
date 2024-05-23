@@ -1,0 +1,15 @@
+{
+  "model": "Social",
+  "presets": [
+    {
+      "label": "Instagram icon",
+      "thumbnail": "images/social-instagram-icon-9544.png",
+      "data": {
+        "altText": "Instagram link",
+        "url": "/",
+        "icon": "instagram",
+        "elementId": ""
+      }
+    }
+  ]
+}

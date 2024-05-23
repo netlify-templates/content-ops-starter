@@ -1,0 +1,47 @@
+{
+    "model": "Person",
+    "presets": [
+        {
+            "label": "Person with bio",
+            "locale": null,
+            "data": {
+                "name": "First Last",
+                "role": "Job title",
+                "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n",
+                "image": {
+                    "url": "/images/avatar1.svg",
+                    "altText": "First Last",
+                    "elementId": null,
+                    "styles": {
+                        "self": {
+                            "borderRadius": "medium",
+                            "margin": [
+                                "mb-8"
+                            ]
+                        }
+                    },
+                    "$$type": "ImageBlock"
+                },
+                "colors": "bg-light-fg-dark",
+                "elementId": null,
+                "styles": {
+                    "self": {
+                        "padding": [
+                            "pt-6",
+                            "pb-6",
+                            "pl-6",
+                            "pr-6"
+                        ],
+                        "textAlign": "center",
+                        "borderColor": "border-neutral",
+                        "borderStyle": "solid",
+                        "borderWidth": 0,
+                        "borderRadius": "none",
+                        "justifyContent": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/person-person-with-bio-2ee3.png"
+        }
+    ]
+}

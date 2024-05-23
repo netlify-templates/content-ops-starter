@@ -1,0 +1,124 @@
+{
+    "model": "FeaturedItemsSection",
+    "presets": [
+        {
+            "label": "Featured products",
+            "locale": null,
+            "data": {
+                "title": {
+                    "text": "Items on sale",
+                    "color": "text-dark",
+                    "styles": {
+                        "self": {
+                            "textAlign": "left"
+                        }
+                    },
+                    "$$type": "TitleBlock"
+                },
+                "subtitle": null,
+                "items": [
+                    {
+                        "title": "Faux Fur Throw",
+                        "tagline": null,
+                        "subtitle": "$ 88 – $ 176",
+                        "text": null,
+                        "image": {
+                            "url": "/images/img-placeholder.svg",
+                            "altText": "Faux Fur Throw",
+                            "elementId": "",
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "medium"
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-0",
+                                    "pl-0",
+                                    "pb-0",
+                                    "pr-0"
+                                ],
+                                "textAlign": "left",
+                                "borderRadius": "none",
+                                "flexDirection": "col",
+                                "justifyContent": "center"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    },
+                    {
+                        "title": "Cotton Knit Throws",
+                        "tagline": null,
+                        "subtitle": "$ 44.99 – $ 90",
+                        "text": null,
+                        "image": {
+                            "url": "/images/img-placeholder.svg",
+                            "altText": "Cotton Knit Throws",
+                            "elementId": "",
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "medium"
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "styles": null,
+                        "$$type": "FeaturedItem"
+                    },
+                    {
+                        "title": "Chunky Cotton Knit Throw",
+                        "tagline": null,
+                        "subtitle": "$117",
+                        "text": null,
+                        "image": {
+                            "url": "/images/img-placeholder.svg",
+                            "altText": "Chunky Cotton Knit Throw",
+                            "elementId": "",
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "medium"
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "styles": null,
+                        "$$type": "FeaturedItem"
+                    }
+                ],
+                "actions": [],
+                "badge": null,
+                "elementId": "",
+                "variant": "three-col-grid",
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "padding": [
+                            "pt-16",
+                            "pl-8",
+                            "pb-8",
+                            "pr-8"
+                        ],
+                        "justifyContent": "flex-start"
+                    },
+                    "subtitle": {
+                        "textAlign": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/featured-items-section-featured-products-5266.png"
+        }
+    ]
+}

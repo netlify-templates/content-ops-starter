@@ -1,0 +1,27 @@
+{
+    "model": "PagedPostsSection",
+    "presets": [
+        {
+            "label": "Post feed, grid",
+            "locale": null,
+            "data": {
+                "title": null,
+                "subtitle": null,
+                "showThumbnail": true,
+                "showExcerpt": true,
+                "showDate": true,
+                "showAuthor": true,
+                "actions": [],
+                "badge": null,
+                "elementId": null,
+                "variant": "three-col-grid",
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {}
+                }
+            },
+            "thumbnail": "images/paged-posts-section-page-post-feed-with-search-f8dd.png"
+        }
+    ]
+}

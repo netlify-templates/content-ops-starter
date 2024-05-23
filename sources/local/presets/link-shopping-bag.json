@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Shopping bag",
+      "thumbnail": "images/link-shopping-bag-f246.png",
+      "data": {
+        "label": "Buy now",
+        "altText": "Buy now",
+        "url": "/",
+        "showIcon": true,
+        "icon": "shoppingBag",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

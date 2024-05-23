@@ -1,0 +1,69 @@
+{
+    "model": "FeaturedPeopleSection",
+    "presets": [
+        {
+            "label": "Featured people",
+            "locale": null,
+            "data": {
+                "title": {
+                    "text": "Meet the team",
+                    "color": "text-dark",
+                    "styles": {
+                        "self": {
+                            "textAlign": "center"
+                        }
+                    },
+                    "$$type": "TitleBlock"
+                },
+                "subtitle": null,
+                "people": [
+                    {
+                        "$$ref": "content/data/person1.json",
+                        "$$type": "Person"
+                    },
+                    {
+                        "$$ref": "content/data/person2.json",
+                        "$$type": "Person"
+                    },
+                    {
+                        "$$ref": "content/data/person3.json",
+                        "$$type": "Person"
+                    },
+                    {
+                        "$$ref": "content/data/person4.json",
+                        "$$type": "Person"
+                    },
+                    {
+                        "$$ref": "content/data/person5.json",
+                        "$$type": "Person"
+                    },
+                    {
+                        "$$ref": "content/data/person6.json",
+                        "$$type": "Person"
+                    }
+                ],
+                "actions": [],
+                "badge": null,
+                "elementId": null,
+                "variant": "three-col-grid",
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "padding": [
+                            "pt-16",
+                            "pl-16",
+                            "pb-16",
+                            "pr-16"
+                        ],
+                        "justifyContent": "center"
+                    },
+                    "subtitle": {
+                        "textAlign": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/featured-people-section-featured-people-d4f4.png"
+        }
+    ]
+}

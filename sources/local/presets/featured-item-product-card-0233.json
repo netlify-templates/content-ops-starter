@@ -1,0 +1,44 @@
+{
+    "model": "FeaturedItem",
+    "presets": [
+        {
+            "label": "Product card",
+            "locale": null,
+            "data": {
+                "title": "Faux Fur Throw",
+                "tagline": null,
+                "subtitle": "$ 88 – $ 176",
+                "text": null,
+                "image": {
+                    "url": "/images/img-placeholder.svg",
+                    "altText": "Faux Fur Throw",
+                    "elementId": "",
+                    "styles": {
+                        "self": {
+                            "borderRadius": "medium"
+                        }
+                    },
+                    "$$type": "ImageBlock"
+                },
+                "actions": [],
+                "elementId": null,
+                "colors": "bg-light-fg-dark",
+                "styles": {
+                    "self": {
+                        "padding": [
+                            "pt-0",
+                            "pl-0",
+                            "pb-0",
+                            "pr-0"
+                        ],
+                        "textAlign": "left",
+                        "borderRadius": "none",
+                        "flexDirection": "col",
+                        "justifyContent": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/featured-item-product-card-0233.png"
+        }
+    ]
+}

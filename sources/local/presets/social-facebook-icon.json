@@ -1,0 +1,15 @@
+{
+  "model": "Social",
+  "presets": [
+    {
+      "label": "Facebook icon",
+      "thumbnail": "images/social-facebook-icon-97c5.png",
+      "data": {
+        "altText": "Facebook link",
+        "url": "/",
+        "icon": "facebook",
+        "elementId": ""
+      }
+    }
+  ]
+}

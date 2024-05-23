@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Reddit link",
+      "thumbnail": "images/link-reddit-link-e762.png",
+      "data": {
+        "label": "Reddit",
+        "altText": "Reddit",
+        "url": "/",
+        "showIcon": true,
+        "icon": "reddit",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

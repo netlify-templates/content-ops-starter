@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Send",
+      "thumbnail": "images/link-send-5cc9.png",
+      "data": {
+        "label": "Send",
+        "altText": "Send",
+        "url": "/",
+        "showIcon": true,
+        "icon": "send",
+        "iconPosition": "right",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

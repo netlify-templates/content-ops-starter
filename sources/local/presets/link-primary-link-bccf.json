@@ -1,0 +1,20 @@
+{
+    "model": "Link",
+    "presets": [
+        {
+            "label": "Primary link",
+            "locale": null,
+            "data": {
+                "label": "See Tutorials",
+                "altText": "",
+                "url": "/",
+                "showIcon": false,
+                "icon": "arrowRight",
+                "iconPosition": "right",
+                "style": "primary",
+                "elementId": ""
+            },
+            "thumbnail": "images/link-primary-link-bccf.png"
+        }
+    ]
+}

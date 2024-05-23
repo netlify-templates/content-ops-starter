@@ -1,0 +1,79 @@
+{
+    "model": "ImageGallerySection",
+    "presets": [
+        {
+            "label": "Logos",
+            "thumbnail": "images/image-gallery-section-logos-d84a.png",
+            "data": {
+                "title": null,
+                "subtitle": "Our customers",
+                "images": [
+                    {
+                        "url": "/images/empathy-logo.svg",
+                        "altText": "Empathy logo",
+                        "elementId": "",
+                        "styles": null,
+                        "$$type": "ImageBlock"
+                    },
+                    {
+                        "url": "/images/wellster-logo.svg",
+                        "altText": "Wellster logo",
+                        "elementId": "",
+                        "styles": null,
+                        "$$type": "ImageBlock"
+                    },
+                    {
+                        "url": "/images/vise-logo.svg",
+                        "altText": "Vise logo",
+                        "elementId": "",
+                        "styles": null,
+                        "$$type": "ImageBlock"
+                    },
+                    {
+                        "url": "/images/telus-logo.svg",
+                        "altText": "Telus logo",
+                        "elementId": "",
+                        "styles": null,
+                        "$$type": "ImageBlock"
+                    },
+                    {
+                        "url": "/images/contenful-logo.svg",
+                        "altText": "Contentful logo",
+                        "elementId": "",
+                        "styles": null,
+                        "$$type": "ImageBlock"
+                    },
+                    {
+                        "url": "/images/sanity-logo.svg",
+                        "altText": "Sanity logo",
+                        "elementId": "",
+                        "styles": null,
+                        "$$type": "ImageBlock"
+                    },
+                    {
+                        "url": "/images/rangle-logo.svg",
+                        "altText": "Rangle logo",
+                        "elementId": "",
+                        "styles": null,
+                        "$$type": "ImageBlock"
+                    }
+                ],
+                "badge": null,
+                "elementId": "",
+                "motion": "static",
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "margin": ["mt-0", "ml-0", "mb-0", "mr-0"],
+                        "padding": ["pt-16", "pl-16", "pb-16", "pr-16"],
+                        "justifyContent": "center"
+                    },
+                    "subtitle": {
+                        "textAlign": "center"
+                    }
+                }
+            }
+        }
+    ]
+}

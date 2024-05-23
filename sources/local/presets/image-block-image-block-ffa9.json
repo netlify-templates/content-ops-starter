@@ -1,0 +1,20 @@
+{
+    "model": "ImageBlock",
+    "presets": [
+        {
+            "label": "Default image",
+            "locale": null,
+            "data": {
+                "url": "/images/hero2.svg",
+                "altText": "Image alt text placeholder",
+                "elementId": "",
+                "styles": {
+                    "self": {
+                        "borderRadius": "medium"
+                    }
+                }
+            },
+            "thumbnail": "images/image-block-image-block-ffa9.png"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Secondary link",
+      "thumbnail": "images/link-secondary-link-0c1a.png",
+      "data": {
+        "label": "See Tutorials",
+        "altText": "",
+        "url": "/",
+        "showIcon": false,
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "model": "FooterLinksGroup",
+  "presets": [
+    {
+      "label": "Product",
+      "thumbnail": "images/footer-links-group-product-df98.png",
+      "data": {
+        "title": "Product",
+        "links": [
+          {
+            "label": "Features",
+            "altText": "",
+            "url": "/",
+            "showIcon": false,
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "",
+            "$$type": "Link"
+          },
+          {
+            "label": "Pricing",
+            "altText": "",
+            "url": "/pricing",
+            "showIcon": false,
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "",
+            "$$type": "Link"
+          },
+          {
+            "label": "Documentation",
+            "altText": "",
+            "url": "/",
+            "showIcon": false,
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "",
+            "$$type": "Link"
+          }
+        ],
+        "styles": null
+      }
+    }
+  ]
+}

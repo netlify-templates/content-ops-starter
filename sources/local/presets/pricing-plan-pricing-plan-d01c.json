@@ -1,0 +1,55 @@
+{
+    "model": "PricingPlan",
+    "presets": [
+        {
+            "label": "Pricing plan",
+            "locale": null,
+            "data": {
+                "title": "Developers",
+                "price": "Free",
+                "details": "No credit card required",
+                "description": "Sed ut perspiciatis unde omnis, iste natus error sit voluptatem accusantium doloremque.",
+                "features": [
+                    "Feature one",
+                    "Feature two",
+                    "Feature three",
+                    "Feature four"
+                ],
+                "image": {
+                    "url": "/images/abstract-feature1.svg",
+                    "altText": "Pricing plan 1",
+                    "elementId": null,
+                    "styles": null,
+                    "$$type": "ImageBlock"
+                },
+                "actions": [
+                    {
+                        "label": "Try for free",
+                        "altText": null,
+                        "url": "/",
+                        "showIcon": null,
+                        "icon": "arrowRight",
+                        "iconPosition": "right",
+                        "style": "secondary",
+                        "elementId": null,
+                        "$$type": "Button"
+                    }
+                ],
+                "elementId": null,
+                "colors": "bg-neutral-fg-dark",
+                "styles": {
+                    "self": {
+                        "padding": [
+                            "pt-6",
+                            "pb-10",
+                            "pl-6",
+                            "pr-6"
+                        ],
+                        "borderRadius": "large"
+                    }
+                }
+            },
+            "thumbnail": "images/pricing-plan-pricing-plan-d01c.png"
+        }
+    ]
+}

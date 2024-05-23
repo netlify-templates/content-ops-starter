@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Facebook link",
+      "thumbnail": "images/link-facebook-link-4bf1.png",
+      "data": {
+        "label": "Facebook",
+        "altText": "Facebook",
+        "url": "/",
+        "showIcon": true,
+        "icon": "facebook",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

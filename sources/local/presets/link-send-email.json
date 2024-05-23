@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Send email",
+      "thumbnail": "images/link-send-email-7dad.png",
+      "data": {
+        "label": "Send email",
+        "altText": "Play",
+        "url": "/",
+        "showIcon": true,
+        "icon": "mail",
+        "iconPosition": "right",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

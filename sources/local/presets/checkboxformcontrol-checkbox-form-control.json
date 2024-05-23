@@ -1,0 +1,15 @@
+{
+  "model": "CheckboxFormControl",
+  "presets": [
+    {
+      "label": "Checkbox form control",
+      "thumbnail": "images/checkbox-form-control-checkbox-form-control-2967.png",
+      "data": {
+        "name": "updates",
+        "label": "I have read and accept the legal terms.",
+        "isRequired": false,
+        "width": "full"
+      }
+    }
+  ]
+}

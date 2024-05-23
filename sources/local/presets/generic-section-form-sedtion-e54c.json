@@ -1,0 +1,89 @@
+{
+    "model": "GenericSection",
+    "presets": [
+        {
+            "label": "Form section",
+            "locale": null,
+            "data": {
+                "title": {
+                    "text": "Generic Section With A Form",
+                    "color": "text-dark",
+                    "styles": null,
+                    "$$type": "TitleBlock"
+                },
+                "subtitle": "Section with a form subtitle",
+                "text": "Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.\nAenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet\nerat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat\nvitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.",
+                "actions": [],
+                "media": {
+                    "fields": [
+                        {
+                            "name": "name",
+                            "label": "Name",
+                            "hideLabel": true,
+                            "placeholder": "Your name",
+                            "isRequired": true,
+                            "width": "full",
+                            "$$type": "TextFormControl"
+                        },
+                        {
+                            "name": "email",
+                            "label": "Email",
+                            "hideLabel": true,
+                            "placeholder": "Your email",
+                            "isRequired": true,
+                            "width": "full",
+                            "$$type": "EmailFormControl"
+                        },
+                        {
+                            "name": "message",
+                            "label": "Message",
+                            "hideLabel": true,
+                            "placeholder": "Your message",
+                            "isRequired": null,
+                            "width": "full",
+                            "$$type": "TextareaFormControl"
+                        }
+                    ],
+                    "submitButton": {
+                        "label": "Submit",
+                        "showIcon": null,
+                        "icon": "arrowRight",
+                        "iconPosition": "right",
+                        "style": "primary",
+                        "elementId": null,
+                        "$$type": "SubmitButtonFormControl"
+                    },
+                    "action": "/.netlify/functions/submission_created",
+                    "destination": null,
+                    "elementId": "contact-form",
+                    "styles": {
+                        "self": {
+                            "padding": [
+                                "pt-6",
+                                "pb-6",
+                                "pl-6",
+                                "pr-6"
+                            ],
+                            "borderColor": "border-dark",
+                            "borderStyle": "solid",
+                            "borderWidth": 1,
+                            "borderRadius": "large"
+                        }
+                    },
+                    "$$type": "FormBlock"
+                },
+                "badge": {
+                    "label": "Contact Us",
+                    "color": "text-primary",
+                    "styles": null,
+                    "$$type": "Badge"
+                },
+                "elementId": null,
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": null
+            },
+            "thumbnail": "images/generic-section-form-sedtion-e54c.png"
+        }
+    ]
+}

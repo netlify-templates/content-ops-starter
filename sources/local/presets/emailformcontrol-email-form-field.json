@@ -1,0 +1,17 @@
+{
+  "model": "EmailFormControl",
+  "presets": [
+    {
+      "label": "Email form field",
+      "thumbnail": "images/email-form-control-email-form-field-7835.png",
+      "data": {
+        "name": "email",
+        "label": "Email",
+        "hideLabel": true,
+        "placeholder": "Your email",
+        "isRequired": true,
+        "width": "full"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Vimeo link",
+      "thumbnail": "images/link-vimeo-link-4487.png",
+      "data": {
+        "label": "Vimeo",
+        "altText": "Vimeo",
+        "url": "/",
+        "showIcon": true,
+        "icon": "vimeo",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

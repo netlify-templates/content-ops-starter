@@ -1,0 +1,37 @@
+{
+    "type": "Person",
+    "name": "Nina Mercado",
+    "role": "Co-founder & CEO",
+    "image": {
+        "url": "/images/avatar4.svg",
+        "altText": "Nina Mercado",
+        "styles": {
+            "self": {
+                "borderRadius": "medium",
+                "margin": [
+                    "mb-8"
+                ]
+            }
+        },
+        "type": "ImageBlock"
+    },
+    "colors": "bg-light-fg-dark",
+    "elementId": null,
+    "styles": {
+        "self": {
+            "padding": [
+                "pt-6",
+                "pb-6",
+                "pl-6",
+                "pr-6"
+            ],
+            "textAlign": "center",
+            "borderColor": "border-neutral",
+            "borderStyle": "solid",
+            "borderWidth": 0,
+            "borderRadius": "none",
+            "justifyContent": "center"
+        }
+    },
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n"
+}

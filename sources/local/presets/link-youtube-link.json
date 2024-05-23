@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "YouTube link",
+      "thumbnail": "images/link-youtube-link-dbc6.png",
+      "data": {
+        "label": "YouTube",
+        "altText": "YouTube",
+        "url": "/",
+        "showIcon": true,
+        "icon": "youtube",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

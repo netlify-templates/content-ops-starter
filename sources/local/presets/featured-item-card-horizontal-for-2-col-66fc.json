@@ -1,0 +1,42 @@
+{
+    "model": "FeaturedItem",
+    "presets": [
+        {
+            "label": "Card, horizontal, for 2 col",
+            "locale": null,
+            "data": {
+                "title": "Feature Item One",
+                "tagline": "This is the tagline",
+                "subtitle": "This is the item subtitle",
+                "text": "Follow the tutorial to build your first Netlify Create site.\n",
+                "image": {
+                    "url": "/images/abstract-feature1.svg",
+                    "altText": "Placeholder text",
+                    "elementId": null,
+                    "styles": {
+                        "self": {
+                            "borderRadius": "x-large"
+                        }
+                    },
+                    "$$type": "ImageBlock"
+                },
+                "actions": [],
+                "elementId": null,
+                "colors": "bg-light-fg-dark",
+                "styles": {
+                    "self": {
+                        "padding": [
+                            "pt-8",
+                            "pl-8",
+                            "pb-8",
+                            "pr-8"
+                        ],
+                        "borderRadius": "x-large",
+                        "flexDirection": "row"
+                    }
+                }
+            },
+            "thumbnail": "images/featured-item-card-horizontal-for-2-col-66fc.png"
+        }
+    ]
+}

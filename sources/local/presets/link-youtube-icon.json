@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "YouTube icon",
+      "thumbnail": "images/link-youtube-icon-f909.png",
+      "data": {
+        "label": null,
+        "altText": "YouTube",
+        "url": "/",
+        "showIcon": true,
+        "icon": "youtube",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

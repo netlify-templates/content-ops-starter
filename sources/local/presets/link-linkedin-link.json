@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "LinkedIn link",
+      "thumbnail": "images/link-linkedin-link-427f.png",
+      "data": {
+        "label": "LinkedIn",
+        "altText": "LinkedIn",
+        "url": "/",
+        "showIcon": true,
+        "icon": "linkedin",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Facebook icon",
+      "thumbnail": "images/link-facebook-icon-e829.png",
+      "data": {
+        "label": null,
+        "altText": "Facebook",
+        "url": "/",
+        "showIcon": true,
+        "icon": "facebook",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

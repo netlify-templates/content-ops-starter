@@ -1,0 +1,18 @@
+{
+  "model": "SelectFormControl",
+  "presets": [
+    {
+      "label": "Select from control",
+      "thumbnail": "images/select-form-control-select-from-control-c9d6.png",
+      "data": {
+        "name": "company-size",
+        "label": "Company size",
+        "hideLabel": false,
+        "defaultValue": "Please choose...",
+        "options": [],
+        "isRequired": false,
+        "width": "full"
+      }
+    }
+  ]
+}

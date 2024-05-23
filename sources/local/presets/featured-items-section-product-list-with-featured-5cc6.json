@@ -1,0 +1,141 @@
+{
+    "model": "FeaturedItemsSection",
+    "presets": [
+        {
+            "label": "Product list, with featured",
+            "locale": null,
+            "data": {
+                "title": {
+                    "text": "Items on sale",
+                    "color": "text-dark",
+                    "styles": {
+                        "self": {
+                            "textAlign": "center"
+                        }
+                    },
+                    "$$type": "TitleBlock"
+                },
+                "subtitle": null,
+                "items": [
+                    {
+                        "title": "Faux Fur Throw",
+                        "tagline": null,
+                        "subtitle": "$ 88 – $ 176",
+                        "text": "Available in a range of colors and patterns, we make it easy to pick the perfect look for you.\n\n\n\nOur faux fur is incredibly soft, plush and oh-so inviting. It's like the real deal (but better)!\n\n\n\n",
+                        "image": {
+                            "url": "/images/img-placeholder.svg",
+                            "altText": "Faux Fur Throw",
+                            "elementId": "",
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "medium",
+                                    "padding": [
+                                        "pt-0",
+                                        "pl-0",
+                                        "pb-0",
+                                        "pr-0"
+                                    ]
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-6",
+                                    "pl-6",
+                                    "pb-6",
+                                    "pr-6"
+                                ],
+                                "textAlign": "left",
+                                "borderColor": "border-neutralAlt",
+                                "borderWidth": 2,
+                                "borderRadius": "x-small",
+                                "flexDirection": "row-reverse",
+                                "justifyContent": "center",
+                                "borderStyle": "dotted"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    },
+                    {
+                        "title": "Cotton Knit Throws",
+                        "tagline": null,
+                        "subtitle": "$ 44.99 – $ 90",
+                        "text": null,
+                        "image": {
+                            "url": "/images/img-placeholder.svg",
+                            "altText": "Cotton Knit Throws",
+                            "elementId": "",
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "medium"
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "styles": {
+                            "self": {
+                                "flexDirection": "row"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    },
+                    {
+                        "title": "Chunky Cotton Knit Throw",
+                        "tagline": null,
+                        "subtitle": "$117",
+                        "text": null,
+                        "image": {
+                            "url": "/images/img-placeholder.svg",
+                            "altText": "Chunky Cotton Knit Throw",
+                            "elementId": "",
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "medium"
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-light-fg-dark",
+                        "styles": {
+                            "self": {
+                                "flexDirection": "row"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    }
+                ],
+                "actions": [],
+                "badge": null,
+                "elementId": "",
+                "variant": "small-list",
+                "colors": "bg-light-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "padding": [
+                            "pt-0",
+                            "pl-0",
+                            "pb-0",
+                            "pr-0"
+                        ],
+                        "justifyContent": "center"
+                    },
+                    "subtitle": {
+                        "textAlign": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/featured-items-section-product-list-with-featured-5cc6.png"
+        }
+    ]
+}

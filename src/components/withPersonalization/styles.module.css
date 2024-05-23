@@ -1,0 +1,21 @@
+.wrapper {
+    position: relative;
+}
+
+.controls {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9999999;
+    border: 1px solid;
+    padding: 4px 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+    border-radius: 2px;
+    font-family: 'ES Klarheit Grotesk', 'Inter', 'sans-serif';
+}
+
+.controls select {
+    outline: none;
+    margin-left: 5px;
+}

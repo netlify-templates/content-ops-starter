@@ -1,0 +1,147 @@
+{
+    "model": "Footer",
+    "presets": [
+        {
+            "label": "Footer",
+            "locale": null,
+            "data": {
+                "logo": {
+                    "url": "/images/logo-white.svg",
+                    "altText": "Logo light",
+                    "elementId": null,
+                    "styles": null,
+                    "$$type": "ImageBlock"
+                },
+                "title": null,
+                "text": "A description of your brand",
+                "primaryLinks": {
+                    "title": "Product",
+                    "links": [
+                        {
+                            "label": "Features",
+                            "altText": "Features page",
+                            "url": "/features",
+                            "showIcon": null,
+                            "icon": "arrowRight",
+                            "iconPosition": "right",
+                            "style": "secondary",
+                            "elementId": null,
+                            "$$type": "Link"
+                        },
+                        {
+                            "label": "Pricing",
+                            "altText": null,
+                            "url": "/pricing",
+                            "showIcon": null,
+                            "icon": "arrowRight",
+                            "iconPosition": "right",
+                            "style": "secondary",
+                            "elementId": null,
+                            "$$type": "Link"
+                        },
+                        {
+                            "label": "Documentation",
+                            "altText": null,
+                            "url": "/",
+                            "showIcon": null,
+                            "icon": "arrowRight",
+                            "iconPosition": "right",
+                            "style": "secondary",
+                            "elementId": null,
+                            "$$type": "Link"
+                        }
+                    ],
+                    "styles": null,
+                    "$$type": "FooterLinksGroup"
+                },
+                "secondaryLinks": {
+                    "title": "Company",
+                    "links": [
+                        {
+                            "label": "Careers",
+                            "altText": "careers page",
+                            "url": "/careers",
+                            "showIcon": null,
+                            "icon": "arrowRight",
+                            "iconPosition": "right",
+                            "style": "secondary",
+                            "elementId": null,
+                            "$$type": "Link"
+                        },
+                        {
+                            "label": "Blog",
+                            "altText": null,
+                            "url": "/blog",
+                            "showIcon": null,
+                            "icon": "arrowRight",
+                            "iconPosition": "right",
+                            "style": "secondary",
+                            "elementId": null,
+                            "$$type": "Link"
+                        }
+                    ],
+                    "styles": null,
+                    "$$type": "FooterLinksGroup"
+                },
+                "socialLinks": [
+                    {
+                        "altText": "GitHub link",
+                        "url": "https://github.com/netlify",
+                        "icon": "github",
+                        "elementId": null,
+                        "$$type": "Social"
+                    },
+                    {
+                        "altText": "Twitter link",
+                        "url": "https://twitter.com/netlify",
+                        "icon": "twitter",
+                        "elementId": null,
+                        "$$type": "Social"
+                    },
+                    {
+                        "altText": "LinkedIn link",
+                        "url": "https://www.linkedin.com/company/netlify",
+                        "icon": "linkedin",
+                        "elementId": null,
+                        "$$type": "Social"
+                    },
+                    {
+                        "altText": "Email link",
+                        "url": "/",
+                        "icon": "mail",
+                        "elementId": null,
+                        "$$type": "Social"
+                    }
+                ],
+                "legalLinks": [
+                    {
+                        "label": "Terms",
+                        "altText": null,
+                        "url": "/",
+                        "showIcon": null,
+                        "icon": "arrowRight",
+                        "iconPosition": "right",
+                        "style": "secondary",
+                        "elementId": null,
+                        "$$type": "Link"
+                    },
+                    {
+                        "label": "Privacy",
+                        "altText": null,
+                        "url": "/",
+                        "showIcon": null,
+                        "icon": "arrowRight",
+                        "iconPosition": "right",
+                        "style": "secondary",
+                        "elementId": null,
+                        "$$type": "Link"
+                    }
+                ],
+                "copyrightText": "Powered by [Netlify](https://www.netlify.com/)",
+                "colors": "bg-dark-fg-light",
+                "styles": null
+            },
+            "thumbnail": "images/footer-footer-80a8.png"
+        }
+    ]
+}

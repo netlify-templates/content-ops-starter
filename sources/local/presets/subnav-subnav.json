@@ -1,0 +1,49 @@
+{
+  "model": "SubNav",
+  "presets": [
+    {
+      "label": "Subnav",
+      "thumbnail": "images/sub-nav-subnav-b29b.png",
+      "data": {
+        "label": "Dropdown",
+        "altText": "Dropdown",
+        "links": [
+          {
+            "label": "Dropdown item",
+            "altText": "",
+            "url": "/",
+            "showIcon": false,
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "",
+            "$$type": "Link"
+          },
+          {
+            "label": "Dropdown item",
+            "altText": "",
+            "url": "/",
+            "showIcon": false,
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "",
+            "$$type": "Link"
+          },
+          {
+            "label": "Dropdown item",
+            "altText": "",
+            "url": "/",
+            "showIcon": false,
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "elementId": "",
+            "$$type": "Link"
+          }
+        ],
+        "labelStyle": "secondary"
+      }
+    }
+  ]
+}

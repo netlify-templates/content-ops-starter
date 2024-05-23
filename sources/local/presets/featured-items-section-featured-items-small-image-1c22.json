@@ -1,0 +1,161 @@
+{
+    "model": "FeaturedItemsSection",
+    "presets": [
+        {
+            "label": "Featured items, small image",
+            "locale": null,
+            "data": {
+                "title": {
+                    "text": "Key Benefits",
+                    "color": "text-dark",
+                    "styles": {
+                        "self": {
+                            "textAlign": "center"
+                        }
+                    },
+                    "$$type": "TitleBlock"
+                },
+                "subtitle": "Subtitle goes here",
+                "items": [
+                    {
+                        "title": "500k",
+                        "tagline": null,
+                        "subtitle": "Numbers Done",
+                        "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                        "image": {
+                            "url": "/images/icon1.svg",
+                            "altText": "Lightning bolt symbol on red background",
+                            "elementId": "",
+                            "styles": {
+                                "self": {
+                                    "borderRadius": "x-large"
+                                }
+                            },
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-neutralAlt-fg-dark",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-8",
+                                    "pl-8",
+                                    "pb-8",
+                                    "pr-8"
+                                ],
+                                "borderRadius": "x-large",
+                                "flexDirection": "row",
+                                "justifyContent": "center",
+                                "textAlign": "left"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    },
+                    {
+                        "title": "20x",
+                        "tagline": null,
+                        "subtitle": "The Job Stuff",
+                        "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                        "image": {
+                            "url": "/images/icon2.svg",
+                            "altText": "Featured icon two",
+                            "elementId": "",
+                            "styles": null,
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-neutralAlt-fg-dark",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-8",
+                                    "pl-8",
+                                    "pb-8",
+                                    "pr-8"
+                                ],
+                                "borderRadius": "x-large",
+                                "flexDirection": "row",
+                                "textAlign": "left",
+                                "justifyContent": "center"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    },
+                    {
+                        "title": "200%",
+                        "tagline": null,
+                        "subtitle": "Faster",
+                        "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.",
+                        "image": {
+                            "url": "/images/icon3.svg",
+                            "altText": "Featured icon three",
+                            "elementId": "",
+                            "styles": null,
+                            "$$type": "ImageBlock"
+                        },
+                        "actions": [],
+                        "elementId": null,
+                        "colors": "bg-neutralAlt-fg-dark",
+                        "styles": {
+                            "self": {
+                                "padding": [
+                                    "pt-8",
+                                    "pl-8",
+                                    "pb-8",
+                                    "pr-8"
+                                ],
+                                "borderRadius": "x-large",
+                                "flexDirection": "row"
+                            }
+                        },
+                        "$$type": "FeaturedItem"
+                    }
+                ],
+                "actions": [
+                    {
+                        "label": "Get started",
+                        "altText": "",
+                        "url": "/",
+                        "showIcon": false,
+                        "icon": "arrowRight",
+                        "iconPosition": "right",
+                        "style": "primary",
+                        "elementId": "",
+                        "$$type": "Button"
+                    }
+                ],
+                "badge": {
+                    "label": "This is a badge",
+                    "color": "text-primary",
+                    "styles": {
+                        "self": {
+                            "textAlign": "center"
+                        }
+                    },
+                    "$$type": "Badge"
+                },
+                "elementId": "",
+                "variant": "three-col-grid",
+                "colors": "bg-neutral-fg-dark",
+                "backgroundImage": null,
+                "styles": {
+                    "self": {
+                        "padding": [
+                            "pb-16",
+                            "pt-16",
+                            "pl-16",
+                            "pr-16"
+                        ],
+                        "justifyContent": "center"
+                    },
+                    "subtitle": {
+                        "textAlign": "center"
+                    }
+                }
+            },
+            "thumbnail": "images/featured-items-section-featured-items-small-image-1c22.png"
+        }
+    ]
+}

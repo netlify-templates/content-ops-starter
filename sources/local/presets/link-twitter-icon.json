@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Twitter icon",
+      "thumbnail": "images/link-twitter-icon-23d8.png",
+      "data": {
+        "label": null,
+        "altText": "Twitter",
+        "url": "/",
+        "showIcon": true,
+        "icon": "twitter",
+        "iconPosition": "left",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}

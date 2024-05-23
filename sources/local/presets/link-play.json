@@ -1,0 +1,19 @@
+{
+  "model": "Link",
+  "presets": [
+    {
+      "label": "Play",
+      "thumbnail": "images/link-play-6021.png",
+      "data": {
+        "label": "Play",
+        "altText": "Play",
+        "url": "/",
+        "showIcon": true,
+        "icon": "play",
+        "iconPosition": "right",
+        "style": "secondary",
+        "elementId": ""
+      }
+    }
+  ]
+}
