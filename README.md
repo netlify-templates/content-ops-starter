@@ -1,6 +1,10 @@
-# A New Netlify Create Project
+# Netlify Create Content Ops Starter 
 
-Welcome to your new project created with Netlify Create!
+![Content Ops Starter](https://assets.stackbit.com/docs/content-ops-starter-thumb.png)
+
+Netlify Create starter that's made for customization with a flexible content model, component library and [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
+
+**⚡ View demo:** [https://content-ops-starter.netlify.app/](https://content-ops-starter.netlify.app/)
 
 ## Develop with Netlify Create Locally
 
