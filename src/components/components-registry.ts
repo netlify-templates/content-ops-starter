@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
-import withPersonalization from './withPersonalization';
 
 /**
  * The getComponent() function loads a component using dynamic import.
@@ -11,8 +10,7 @@ import withPersonalization from './withPersonalization';
  */
 
 export function getComponent(key: string): ComponentType {
-    const component = components[key];
-    return personalizedComponents[key] ? withPersonalization(component, personalizedComponents[key]) : component;
+    return components[key];
 }
 
 /**
@@ -58,12 +56,4 @@ const components = {
     PostLayout: dynamic(() => import('./layouts/PostLayout')),
     PostFeedLayout: dynamic(() => import('./layouts/PostFeedLayout')),
     PostFeedCategoryLayout: dynamic(() => import('./layouts/PostFeedCategoryLayout'))
-};
-
-/**
- * For any component configured as personalizable (via Ninetailed's Contentful App),
- * add the model name as key and the "label field" as value (this is used in the variant selection dropdown).
- */
-const personalizedComponents = {
-    GenericSection: 'subtitle'
 };
