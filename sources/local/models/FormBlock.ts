@@ -15,13 +15,7 @@ export const FormBlock: Model = {
             localized: false,
             items: {
                 type: 'model',
-                models: [
-                    'TextFormControl',
-                    'EmailFormControl',
-                    'TextareaFormControl',
-                    'CheckboxFormControl',
-                    'SelectFormControl'
-                ]
+                models: ['TextFormControl', 'EmailFormControl', 'TextareaFormControl', 'CheckboxFormControl', 'SelectFormControl']
             }
         },
         {
@@ -32,26 +26,6 @@ export const FormBlock: Model = {
             hidden: false,
             localized: false,
             models: ['SubmitButtonFormControl']
-        },
-        {
-            type: 'string',
-            name: 'action',
-            label: 'Action (form submission URL)',
-            required: false,
-            default: '/.netlify/functions/submission_created',
-            hidden: false,
-            localized: false,
-            group: 'settings'
-        },
-        {
-            type: 'string',
-            name: 'destination',
-            label: 'Destination (email to redirect responses)',
-            required: false,
-            default: '',
-            hidden: false,
-            localized: false,
-            group: 'settings'
         },
         {
             type: 'string',
