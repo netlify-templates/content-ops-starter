@@ -711,7 +711,6 @@ sections:
           placeholder: Your message
           width: full
           type: TextareaFormControl
-      action: /.netlify/functions/submission_created
       elementId: contact-form
       styles:
         self:

@@ -1,6 +1,3 @@
-import { SignJWT } from 'jose/jwt/sign';
-import crypto from 'crypto';
-
 import {
     getRootPagePath,
     resolveReferences,
@@ -91,20 +88,5 @@ const StaticPropsResolvers = {
     },
     FeaturedPeopleSection: (props, data, debugContext) => {
         return resolveReferences(props, ['people'], data.objects, debugContext);
-    },
-    FormBlock: async (props) => {
-        if (!props.destination) {
-            return props;
-        }
-        if (!process.env.STACKBIT_CONTACT_FORM_SECRET) {
-            console.error(`No STACKBIT_CONTACT_FORM_SECRET provided. It will not work properly for production build.`);
-            return props;
-        }
-        const secretKey = crypto.createHash('sha256').update(process.env.STACKBIT_CONTACT_FORM_SECRET).digest();
-        const destination = await new SignJWT({ email: props.destination }).setProtectedHeader({ alg: 'HS256' }).sign(secretKey);
-        return {
-            ...props,
-            destination
-        };
     }
 };
