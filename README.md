@@ -1,32 +1,38 @@
-# Netlify Create Content Ops Starter 
+# Netlify Content Ops Starter 
 
 ![Content Ops Starter](https://assets.stackbit.com/docs/content-ops-starter-thumb.png)
 
-Netlify Create starter that's made for customization with a flexible content model, component library and [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
+Netlify starter that's made for customization with a flexible content model, component library, [visual editing](https://docs.netlify.com/visual-editor/overview/) and [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
 
 **⚡ View demo:** [https://content-ops-starter.netlify.app/](https://content-ops-starter.netlify.app/)
 
-## Develop with Netlify Create Locally
+## Deploying to Netlify
+
+If you click "Deploy to Netlify" button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/content-ops-starter)
+
+## Develop with Netlify Visual Editor Locally
 
 The typical development process is to begin by working locally. Clone this repository, then run `npm install` in its root directory.
 
 Run the Next.js development server:
 
 ```txt
-cd content-ops-demo
+cd content-ops-starter
 npm run dev
 ```
 
-Install the [Netlify Create CLI](https://www.npmjs.com/package/@stackbit/cli). Then open a new terminal window in the same project directory and run the Netlify Create Dev server:
+Install the [Netlify Visual Editor CLI](https://www.npmjs.com/package/@stackbit/cli). Then open a new terminal window in the same project directory and run the Netlify visual editor dev server:
 
 ```txt
 npm install -g @stackbit/cli
 stackbit dev
 ```
 
-This outputs your own Netlify Create URL. Open this, register or sign in, and you will be directed to Netlify Create's visual editor for your new project.
+This outputs your own Netlify visual editor URL. Open this, register, or sign in, and you will be directed to Netlify's visual editor for your new project.
 
-![Next.js Dev + Netlify Create Dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
+![Next.js Dev + Visual Editor Dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
 
 ## Building for production
 
@@ -38,10 +44,10 @@ npm run build
 
 ## Next Steps
 
-Here are a few suggestions on what to do next if you're new to Netlify Create:
+Here are a few suggestions on what to do next if you're new to Netlify visual editor:
 
-- Learn [how Netlify Create works](https://docs.netlify.com/create/concepts/how-create-works/)
-- Follow the [_Getting Started_ tutorial](https://docs.netlify.com/create/get-started/nextjs-markdown/)
+- Learn [how Netlify visual editor works](https://docs.netlify.com/create/concepts/how-create-works/)
+- Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
 
 ## Support
 
