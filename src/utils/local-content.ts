@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import path from 'path';
-import glob from 'glob';
+import { globSync } from 'glob';
 import frontmatter from 'front-matter';
 import { allModels } from '../../sources/local/models';
 import { Config } from '../../sources/local/models/Config';
@@ -27,7 +27,7 @@ function isRefField(modelName: string, fieldName: string) {
 const supportedFileTypes = ['md', 'json'];
 function contentFilesInPath(dir: string) {
     const globPattern = `${dir}/**/*.{${supportedFileTypes.join(',')}}`;
-    return glob.sync(globPattern);
+    return globSync(globPattern);
 }
 
 function readContent(file: string) {
