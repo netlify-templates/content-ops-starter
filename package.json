@@ -9,7 +9,7 @@
     "dependencies": {
         "@algolia/autocomplete-js": "^1.17.1",
         "@algolia/autocomplete-theme-classic": "^1.17.1",
-        "algoliasearch": "^4.23.3",
+        "algoliasearch": "^4.24.0",
         "classnames": "^2.5.1",
         "dayjs": "^1.11.11",
         "front-matter": "^4.0.2",
@@ -19,7 +19,7 @@
         "next": "14.2.4",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
-        "swiper": "^9.4.1",
+        "swiper": "^11.1.4",
         "tailwindcss": "^3.4.3"
     },
     "devDependencies": {

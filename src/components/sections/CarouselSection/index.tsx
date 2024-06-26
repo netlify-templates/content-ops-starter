@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperClass from 'swiper';
-import { EffectFade } from 'swiper';
+import { EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
@@ -98,22 +98,22 @@ function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, has
             </Swiper>
             <div className={classNames('sb-carousel-nav', items.length > 1 ? 'flex justify-center mt-8 xl:mt-0' : 'hidden')}>
                 <button
-                    className="sb-carousel-prev mx-2 w-10 h-10 rounded-full inline-flex justify-center items-center cursor-pointer xl:absolute xl:left-0 xl:top-1/2 xl:-translate-y-1/2 xl:z-50"
+                    className="inline-flex items-center justify-center w-10 h-10 mx-2 rounded-full cursor-pointer sb-carousel-prev xl:absolute xl:left-0 xl:top-1/2 xl:-translate-y-1/2 xl:z-50"
                     aria-label="Previous"
                     onClick={() => {
                         swiperRef?.slidePrev();
                     }}
                 >
-                    <ChevronBigLeftIcon className="fill-current h-6 w-6" />
+                    <ChevronBigLeftIcon className="w-6 h-6 fill-current" />
                 </button>
                 <button
-                    className="sb-carousel-next mx-2 w-10 h-10 rounded-full inline-flex justify-center items-center cursor-pointer xl:absolute xl:right-0 xl:top-1/2 xl:-translate-y-1/2 xl:z-50"
+                    className="inline-flex items-center justify-center w-10 h-10 mx-2 rounded-full cursor-pointer sb-carousel-next xl:absolute xl:right-0 xl:top-1/2 xl:-translate-y-1/2 xl:z-50"
                     aria-label="Next"
                     onClick={() => {
                         swiperRef?.slideNext();
                     }}
                 >
-                    <ChevronBigRightIcon className="fill-current h-6 w-6" />
+                    <ChevronBigRightIcon className="w-6 h-6 fill-current" />
                 </button>
             </div>
         </div>
@@ -149,22 +149,22 @@ function CarouselMultipleWithNavigation({ items = [], hasTopMargin, hasSectionTi
             </Swiper>
             <div className={classNames('sb-carousel-nav', itemsTotal > 1 ? 'flex justify-center gap-4 mt-8' : 'hidden')}>
                 <button
-                    className="sb-carousel-prev w-10 h-10 rounded-full inline-flex justify-center items-center cursor-pointer"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-full cursor-pointer sb-carousel-prev"
                     aria-label="Previous"
                     onClick={() => {
                         swiperRef?.slidePrev();
                     }}
                 >
-                    <ChevronBigLeftIcon className="fill-current h-6 w-6" />
+                    <ChevronBigLeftIcon className="w-6 h-6 fill-current" />
                 </button>
                 <button
-                    className="sb-carousel-next w-10 h-10 rounded-full inline-flex justify-center items-center cursor-pointer"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-full cursor-pointer sb-carousel-next"
                     aria-label="Next"
                     onClick={() => {
                         swiperRef?.slideNext();
                     }}
                 >
-                    <ChevronBigRightIcon className="fill-current h-6 w-6" />
+                    <ChevronBigRightIcon className="w-6 h-6 fill-current" />
                 </button>
             </div>
         </div>
