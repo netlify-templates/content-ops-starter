@@ -31,7 +31,7 @@
         "@types/react-dom": "^18.3.0",
         "autoprefixer": "^10.4.19",
         "prettier": "^3.3.2",
-        "typescript": "^4.8.4"
+        "typescript": "^5.5.2"
     },
     "main": "next.config.js"
 }
