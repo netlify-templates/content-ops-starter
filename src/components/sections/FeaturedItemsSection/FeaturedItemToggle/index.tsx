@@ -18,7 +18,6 @@ export default function FeaturedItemToggle(props) {
             id={elementId}
             className={classNames(
                 'sb-card',
-                'h-full',
                 colors,
                 styles?.self?.margin ? mapStyles({ margin: styles?.self?.margin }) : undefined,
                 styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : undefined,
@@ -36,9 +35,9 @@ export default function FeaturedItemToggle(props) {
             data-sb-field-path={fieldPath}
         >
             {title && (
-                <TitleTag className="h3 relative pr-8 cursor-pointer" onClick={() => setIsActive(!isActive)}>
+                <TitleTag className="relative pr-8 cursor-pointer h3" onClick={() => setIsActive(!isActive)}>
                     <span {...(fieldPath && { 'data-sb-field-path': '.title' })}>{title}</span>
-                    <span className="absolute right-0 top-1/2 -translate-y-1/2">
+                    <span className="absolute right-0 -translate-y-1/2 top-1/2">
                         <PlusIcon className={classNames('w-6', 'h-6', 'fill-current', isActive ? 'hidden' : null)} />
                         <CloseIcon className={classNames('w-6', 'h-6', 'fill-current', !isActive ? 'hidden' : null)} />
                     </span>
