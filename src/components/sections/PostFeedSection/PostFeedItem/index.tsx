@@ -30,7 +30,6 @@ export default function PostFeedItem(props) {
             className={classNames(
                 'sb-card',
                 'block',
-                'h-full',
                 post.colors ?? 'bg-light-fg-dark',
                 post.styles?.self?.margin ? mapStyles({ margin: post.styles?.self?.margin }) : undefined,
                 post.styles?.self?.padding ? mapStyles({ padding: post.styles?.self?.padding }) : undefined,

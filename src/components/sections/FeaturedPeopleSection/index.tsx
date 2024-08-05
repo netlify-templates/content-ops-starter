@@ -153,7 +153,6 @@ function FeaturedPerson(props) {
             id={elementId}
             className={classNames(
                 'sb-card',
-                'h-full',
                 colors,
                 className,
                 'overflow-hidden',
@@ -189,7 +188,7 @@ function FeaturedPerson(props) {
                 </p>
             )}
             {bio && (
-                <Markdown options={{ forceBlock: true, forceWrapper: true }} className="sb-markdown mt-4" {...(fieldPath && { 'data-sb-field-path': '.bio' })}>
+                <Markdown options={{ forceBlock: true, forceWrapper: true }} className="mt-4 sb-markdown" {...(fieldPath && { 'data-sb-field-path': '.bio' })}>
                     {bio}
                 </Markdown>
             )}
