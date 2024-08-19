@@ -9,7 +9,7 @@
     "dependencies": {
         "@algolia/autocomplete-js": "^1.17.1",
         "@algolia/autocomplete-theme-classic": "^1.17.1",
-        "algoliasearch": "^4.24.0",
+        "algoliasearch": "^5.0.0",
         "classnames": "^2.5.1",
         "dayjs": "^1.11.11",
         "front-matter": "^4.0.2",
