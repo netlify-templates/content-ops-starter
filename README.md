@@ -46,7 +46,7 @@ npm run build
 
 Here are a few suggestions on what to do next if you're new to Netlify visual editor:
 
-- Learn [how Netlify visual editor works](https://docs.netlify.com/create/concepts/how-create-works/)
+- Learn [Netlify visual editor overview](https://docs.netlify.com/visual-editor/visual-editing/)
 - Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
 
 ## Support
