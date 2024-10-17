@@ -13,7 +13,7 @@
         "classnames": "^2.5.1",
         "dayjs": "^1.11.11",
         "front-matter": "^4.0.2",
-        "glob": "^10.4.2",
+        "glob": "^11.0.0",
         "markdown-to-jsx": "^7.4.7",
         "marked": "^14.1.2",
         "next": "14.2.15",
