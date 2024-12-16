@@ -6,7 +6,7 @@ export const ThemeStyle: Model = {
     label: 'Theme Style',
     labelField: 'fontHeadlines',
     singleInstance: true,
-    canDelete: true,
+    canDelete: false,
     filePath: 'content/data/style.json',
     fieldGroups: [
         {

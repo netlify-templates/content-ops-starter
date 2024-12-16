@@ -5,7 +5,7 @@ export const Header: Model = {
     name: 'Header',
     label: 'Header',
     labelField: 'title',
-    canDelete: true,
+    canDelete: false,
     filePath: 'content/data/{slug}.json',
     fieldGroups: [
         {
