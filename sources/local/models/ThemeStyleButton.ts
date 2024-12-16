@@ -168,6 +168,5 @@ export const ThemeStyleButton: Model = {
       controlType: 'slider',
       unit: 'px'
     }
-  ],
-  readOnly: true
+  ]
 };

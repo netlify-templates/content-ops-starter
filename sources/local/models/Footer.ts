@@ -5,7 +5,7 @@ export const Footer: Model = {
     name: 'Footer',
     label: 'Footer',
     labelField: 'title',
-    readOnly: true,
+    canDelete: true,
     filePath: 'content/data/{slug}.json',
     fieldGroups: [
         {

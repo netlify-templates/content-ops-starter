@@ -6,7 +6,7 @@ export const Config: Model = {
     label: 'Config',
     labelField: 'titleSuffix',
     singleInstance: true,
-    readOnly: true,
+    canDelete: true,
     filePath: 'content/data/site.json',
     fields: [
         {

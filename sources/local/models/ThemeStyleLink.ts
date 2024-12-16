@@ -88,5 +88,4 @@ export const ThemeStyleLink: Model = {
       controlType: 'button-group'
     }
   ],
-  readOnly: true
 };

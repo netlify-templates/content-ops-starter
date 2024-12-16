@@ -6,7 +6,7 @@ export const PostFeedLayout: Model = {
     label: 'Blog',
     labelField: 'title',
     singleInstance: true,
-    readOnly: true,
+    canDelete: true,
     filePath: 'content/pages/blog/index.md',
     fieldGroups: [
         {

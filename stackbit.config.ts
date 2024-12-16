@@ -15,7 +15,7 @@ const gitContentSource = new GitContentSource({
 });
 
 export const config = defineStackbitConfig({
-    stackbitVersion: '~0.6.0',
+    stackbitVersion: '~0.7.0',
     ssgName: 'nextjs',
     nodeVersion: '18',
     styleObjectModelName: 'ThemeStyle',
