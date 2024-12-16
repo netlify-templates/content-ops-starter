@@ -5,8 +5,7 @@
 /.pnp
 .pnp.js
 
-# Netlify Create (formerly Stackbit)
-.sourcebit-nextjs-cache.json
+# Netlify Visual Editor (formerly Stackbit)
 .stackbit/cache
 .cache
 

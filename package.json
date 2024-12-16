@@ -14,7 +14,7 @@
         "dayjs": "^1.11.11",
         "front-matter": "^4.0.2",
         "glob": "^10.4.2",
-        "markdown-to-jsx": "^7.4.7",
+        "markdown-to-jsx": "^7.7.1",
         "marked": "^14.1.2",
         "next": "15.1.0",
         "react": "^19.0.0",

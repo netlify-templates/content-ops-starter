@@ -73,7 +73,7 @@
         {
             "label": "Sign up",
             "altText": "Sign up",
-            "url": "/",
+            "url": "https://app.netlify.com/signup",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
