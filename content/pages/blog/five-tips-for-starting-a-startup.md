@@ -14,7 +14,7 @@ featuredImage:
     self:
       borderRadius: medium
 bottomSections: []
-isFeatured: true
+isFeatured: false
 isDraft: false
 seo:
   metaTitle: 5 Tips for Starting a Startup
@@ -24,7 +24,7 @@ seo:
 colors: bg-light-fg-dark
 styles:
   self:
-    flexDirection: row
+    flexDirection: col
 author: content/data/person6.json
 type: PostLayout
 ---
