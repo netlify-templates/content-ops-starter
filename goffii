@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            overflow: hidden;
+            margin: 0;
+        }
+        .question {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        #yesButton {
+            background-color: #ff9999;
+            color: white;
+        }
+        #yesButton:hover {
+            background-color: #ff4d4d;
+        }
+        #noButton {
+            background-color: #cccccc;
+            color: black;
+            position: relative;
+        }
+        #noButton:hover {
+            background-color: #b3b3b3;
+        }
+        .valentine {
+            display: none;
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .valentine img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .valentine p {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: #ff1a1a;
+        }
+        .particle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            border-radius: 50%;
+            animation: float 4s infinite;
+            z-index: 0;
+        }
+        .particle.star {
+            background-color: gold;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        @keyframes float {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-600px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="question" id="question">Будешь моей валентинкой?</div>
+    <div class="buttons">
+        <button id="yesButton">Да</button>
+        <button id="noButton">Нет</button>
+    </div>
+    <div class="valentine" id="valentine">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQIRE804NtC3vkzvU7r4qI-LewZcs5etFOKXN-1J09JKhpiang3QaNxMpi7Q6-qjAR5Gs&usqp=CAU" alt="Валентинка">
+        <p>Люблю тебя котя, ты самая лучшая валентинка !</p>
+    </div>
+
+    <script>
+        const question = document.getElementById('question');
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        const valentine = document.getElementById('valentine');
+
+        yesButton.addEventListener('click', () => {
+            question.style.display = 'none';
+            valentine.style.display = 'block';
+            noButton.style.display = 'none';
+            yesButton.style.display = 'none';
+            createParticles();
+        });
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        function createParticles() {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                if (Math.random() > 0.5) {
+                    particle.classList.add('star');
+                }
+                document.body.appendChild(particle);
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight + window.innerHeight;
+                particle.style.left = `${x}px`;
+                particle.style.top = `${y}px`;
+                particle.style.animationDuration = `${2 + Math.random() * 3}s`;
+
+                particle.addEventListener('animationend', () => {
+                    particle.remove();
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
