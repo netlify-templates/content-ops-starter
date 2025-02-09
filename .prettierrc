@@ -1,14 +1,71 @@
-{
-    "printWidth": 160,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "tabWidth": 4,
-    "overrides": [
-        {
-            "files": ["*.md", "*.yaml"],
-            "options": {
-                "tabWidth": 2
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
-    ]
-}
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #yesBtn {
+            background-color: #ff4081;
+            color: white;
+        }
+        #noBtn {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="question">Will you be my Valentine? ❤️</h1>
+        <button id="yesBtn" onclick="nextStep()">Yes</button>
+        <button id="noBtn" onmouseover="moveNoButton()">No</button>
+    </div>
+
+    <script>
+        let step = 1;
+        function nextStep() {
+            if (step === 1) {
+                document.getElementById("question").innerText = "Are you really sure? 🥺";
+            } else if (step === 2) {
+                document.getElementById("question").innerText = "Are you absolutely sure? 💕";
+            } else {
+                document.body.innerHTML = `<h1>YAY! 🎉 I love you so much! 💖</h1><p>You make my world brighter, and I can't wait to spend this Valentine's Day with you. 🥰</p>`;
+            }
+            step++;
+        }
+
+        function moveNoButton() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.getElementById("noBtn").style.left = `${x}px`;
+            document.getElementById("noBtn").style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
