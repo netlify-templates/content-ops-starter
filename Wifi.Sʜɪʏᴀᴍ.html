@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WiFi Access Portal</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        .box { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; }
+        button { background-color: #28a745; color: white; padding: 10px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>WiFi Access</h2>
+        <p>ইন্টারনেট ব্যবহার করতে টাকা দিন</p>
+        <button onclick="payWithBkash()">Bkash দিয়ে পেমেন্ট করুন</button>
+    </div>
+    
+    <script>
+        function payWithBkash() {
+            window.location.href = "https://your-bkash-payment-link.com";
+        }
+    </script>
+</body>
+</html>
