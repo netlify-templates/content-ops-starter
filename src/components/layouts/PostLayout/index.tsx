@@ -12,16 +12,16 @@ export default function PostLayout(props) {
     const { enableAnnotations = true } = site;
     const { title, date, author, markdown_content, bottomSections = [] } = page;
     const dateTimeAttr = dayjs(date).format('YYYY-MM-DD HH:mm:ss');
-    const formattedDate = dayjs(date).format('MMMM D, YYYY');
+    const formattedDate = dayjs(date).format('YYYY-MM-DD');
 
     return (
         <BaseLayout page={page} site={site}>
             <main id="main" className="sb-layout sb-post-layout">
                 <article className="px-4 py-16 sm:py-28">
-                    <div className="max-w-screen-2xl mx-auto">
+                    <div className="mx-auto max-w-screen-2xl">
                         <header className="max-w-4xl mx-auto mb-12 text-center">
                             <h1 {...(enableAnnotations && { 'data-sb-field-path': 'title' })}>{title}</h1>
-                            <div className="text-sm uppercase mt-4">
+                            <div className="mt-4 text-sm uppercase">
                                 <time dateTime={dateTimeAttr} {...(enableAnnotations && { 'data-sb-field-path': 'date' })}>
                                     {formattedDate}
                                 </time>
@@ -36,7 +36,7 @@ export default function PostLayout(props) {
                         {markdown_content && (
                             <Markdown
                                 options={{ forceBlock: true }}
-                                className="sb-markdown max-w-3xl mx-auto"
+                                className="max-w-3xl mx-auto sb-markdown"
                                 {...(enableAnnotations && { 'data-sb-field-path': 'markdown_content' })}
                             >
                                 {markdown_content}

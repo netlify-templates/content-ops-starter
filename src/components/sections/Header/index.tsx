@@ -26,7 +26,7 @@ export default function Header(props) {
             )}
             {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
         >
-            <div className="max-w-7xl mx-auto">
+            <div className="mx-auto max-w-7xl">
                 <Link href="#main" className="sr-only">
                     Skip to main content
                 </Link>
@@ -55,7 +55,7 @@ function HeaderVariants(props) {
 function HeaderLogoLeftPrimaryLeft(props) {
     const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
     return (
-        <div className="flex items-center relative">
+        <div className="relative flex items-center">
             {(title || logo?.url) && (
                 <div className="mr-10">
                     <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />
@@ -79,7 +79,7 @@ function HeaderLogoLeftPrimaryLeft(props) {
 function HeaderLogoLeftPrimaryCentered(props) {
     const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
     return (
-        <div className="flex items-center relative">
+        <div className="relative flex items-center">
             {(title || logo?.url) && (
                 <div className="mr-10">
                     <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />
@@ -87,7 +87,7 @@ function HeaderLogoLeftPrimaryCentered(props) {
             )}
             {primaryLinks.length > 0 && (
                 <ul
-                    className="hidden lg:flex lg:items-center gap-x-10 absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-auto"
+                    className="absolute hidden w-auto -translate-x-1/2 -translate-y-1/2 lg:flex lg:items-center gap-x-10 left-1/2 top-1/2"
                     {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}
                 >
                     <ListOfLinks links={primaryLinks} colors={colors} enableAnnotations={enableAnnotations} />
@@ -106,14 +106,14 @@ function HeaderLogoLeftPrimaryCentered(props) {
 function HeaderLogoLeftPrimaryRight(props) {
     const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
     return (
-        <div className="flex items-center relative">
+        <div className="relative flex items-center">
             {(title || logo?.url) && (
                 <div className="mr-10">
                     <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />
                 </div>
             )}
             {primaryLinks.length > 0 && (
-                <ul className="hidden lg:flex lg:items-center ml-auto gap-x-10" {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
+                <ul className="hidden ml-auto lg:flex lg:items-center gap-x-10" {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}>
                     <ListOfLinks links={primaryLinks} colors={colors} enableAnnotations={enableAnnotations} />
                 </ul>
             )}
@@ -133,7 +133,7 @@ function HeaderLogoLeftPrimaryRight(props) {
 function HeaderLogoCenteredPrimaryLeft(props) {
     const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
     return (
-        <div className="flex items-center relative">
+        <div className="relative flex items-center">
             {(title || logo?.url) && (
                 <div className="mr-10 lg:mr-0 lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2">
                     <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />
@@ -158,7 +158,7 @@ function HeaderLogoCenteredPrimaryCentered(props) {
     const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', enableAnnotations } = props;
     return (
         <>
-            <div className="flex items-center relative">
+            <div className="relative flex items-center">
                 {(title || logo?.url) && (
                     <div className="mr-10 lg:mr-0 lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2">
                         <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />
@@ -173,7 +173,7 @@ function HeaderLogoCenteredPrimaryCentered(props) {
             </div>
             {primaryLinks.length > 0 && (
                 <ul
-                    className="hidden lg:flex lg:items-center lg:justify-center gap-x-10 mt-4"
+                    className="hidden mt-4 lg:flex lg:items-center lg:justify-center gap-x-10"
                     {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })}
                 >
                     <ListOfLinks links={primaryLinks} colors={colors} enableAnnotations={enableAnnotations} />
@@ -214,14 +214,14 @@ function MobileMenu(props) {
         <div className="ml-auto lg:hidden">
             <button aria-label="Open Menu" title="Open Menu" className="p-2 -mr-1 focus:outline-none" onClick={openMobileMenu}>
                 <span className="sr-only">Open Menu</span>
-                <MenuIcon className="fill-current h-6 w-6" />
+                <MenuIcon className="w-6 h-6 fill-current" />
             </button>
             <div className={classNames(colors, 'fixed', 'inset-0', styles?.self?.padding ?? 'p-4', 'overflow-y-auto', 'z-10', isMenuOpen ? 'block' : 'hidden')}>
                 <div className="flex flex-col min-h-full">
                     <div className="flex items-center justify-between mb-10">
                         {(title || logo?.url) && <SiteLogoLink title={title} logo={logo} enableAnnotations={enableAnnotations} />}
                         <button aria-label="Close Menu" title="Close Menu" className="p-2 -mr-1 focus:outline-none" onClick={closeMobileMenu}>
-                            <CloseIcon className="fill-current h-6 w-6" />
+                            <CloseIcon className="w-6 h-6 fill-current" />
                         </button>
                     </div>
                     {primaryLinks.length > 0 && (
