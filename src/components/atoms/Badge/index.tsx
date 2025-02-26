@@ -22,7 +22,7 @@ export default function Badge(props) {
             )}
             data-sb-field-path={fieldPath}
         >
-            <span className="uppercase tracking-wider" {...(fieldPath && { 'data-sb-field-path': '.label' })}>
+            <span className="tracking-wider uppercase" {...(fieldPath && { 'data-sb-field-path': '.label' })}>
                 {label}
             </span>
         </div>

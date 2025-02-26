@@ -107,7 +107,7 @@ function PostAttribution({ showDate, showAuthor, date, author, className = '', h
             )}
             {showDate && (
                 <time dateTime={dayjs(date).format('YYYY-MM-DD HH:mm:ss')} {...(hasAnnotations && { 'data-sb-field-path': 'date' })}>
-                    {dayjs(date).format('MMM D, YYYY')}
+                    {dayjs(date).format('YYYY-MM-DD')}
                 </time>
             )}
         </div>
