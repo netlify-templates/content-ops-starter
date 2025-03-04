@@ -50,7 +50,7 @@ function readContent(file: string) {
 
     // Make Sourcebit-compatible
     content.__metadata = {
-        id: file,
+        id: file.replace(/\\/g, '/'), // Replace backslashes with forward slashes
         modelName: content.type
     };
 
@@ -96,7 +96,6 @@ export function allContent() {
     });
     const objects = [...pages, ...data];
     const fileToContent = Object.fromEntries(objects.map((e) => [e.__metadata.id, e]));
-
     objects.forEach((e) => resolveReferences(e, fileToContent));
 
     pages.forEach((page) => {
@@ -104,5 +103,8 @@ export function allContent() {
     });
 
     const siteConfig = data.find((e) => e.__metadata.modelName === Config.name);
+
+    resolveReferences(siteConfig, fileToContent);
+
     return { objects, pages, props: { site: siteConfig } };
 }
