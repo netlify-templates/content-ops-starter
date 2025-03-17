@@ -1,5 +1,6 @@
 /*
 Taken from https://www.algolia.com/doc/ui-libraries/autocomplete/integrations/using-react/#with-react-18
+Updated for React 19 compatibility
 */
 import { autocomplete } from '@algolia/autocomplete-js';
 import React, { createElement, Fragment, useEffect, useRef } from 'react';
@@ -22,7 +23,11 @@ export default function BaseAutoComplete(props) {
                 if (!panelRootRef.current || rootRef.current !== root) {
                     rootRef.current = root;
 
-                    panelRootRef.current?.unmount();
+                    // Properly cleanup previous root before creating a new one
+                    if (panelRootRef.current) {
+                        panelRootRef.current.unmount();
+                    }
+
                     panelRootRef.current = createRoot(root);
                 }
 
@@ -32,6 +37,10 @@ export default function BaseAutoComplete(props) {
         });
 
         return () => {
+            // Ensure proper cleanup
+            if (panelRootRef.current) {
+                panelRootRef.current.unmount();
+            }
             search.destroy();
         };
     }, [props]);

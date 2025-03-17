@@ -83,7 +83,7 @@ function CarouselVariants(props) {
 
 function CarouselWithNavigation({ items = [], hasTopMargin, hasSectionTitle, hasAnnotations }) {
     const FeaturedItem = getComponent('FeaturedItem');
-    const [swiperRef, setSwiperRef] = React.useState<SwiperClass>();
+    const [swiperRef, setSwiperRef] = React.useState<SwiperClass | undefined>(undefined);
 
     return (
         <div className={classNames('w-full', 'relative', { 'mt-12': hasTopMargin })} {...(hasAnnotations && { 'data-sb-field-path': '.items' })}>

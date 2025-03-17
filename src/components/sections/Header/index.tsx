@@ -208,7 +208,7 @@ function MobileMenu(props) {
         return () => {
             router.events.off('routeChangeStart', handleRouteChange);
         };
-    }, [router.events]);
+    }, [router]);
 
     return (
         <div className="ml-auto lg:hidden">
@@ -308,7 +308,7 @@ function LinkWithSubnav(props) {
         return () => {
             router.events.off('routeChangeStart', handleRouteChange);
         };
-    }, [router.events]);
+    }, [router]);
 
     return (
         <li
