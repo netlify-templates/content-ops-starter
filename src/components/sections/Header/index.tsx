@@ -186,19 +186,28 @@ function HeaderLogoCenteredPrimaryCentered(props) {
 function MobileMenu(props) {
     const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const router = useRouter();
 
+    // Only modify the DOM after client-side hydration
     const openMobileMenu = () => {
         setIsMenuOpen(true);
-        document.body.style.overflow = 'hidden';
+        if (isMounted) {
+            document.body.style.overflow = 'hidden';
+        }
     };
 
     const closeMobileMenu = () => {
         setIsMenuOpen(false);
-        document.body.style.overflow = 'unset';
+        if (isMounted) {
+            document.body.style.overflow = 'unset';
+        }
     };
 
     useEffect(() => {
+        // Component is now mounted on client
+        setIsMounted(true);
+        
         const handleRouteChange = () => {
             setIsMenuOpen(false);
             document.body.style.overflow = 'unset';
@@ -295,10 +304,14 @@ function ListOfLinks(props) {
 function LinkWithSubnav(props) {
     const { link, colors, inMobileMenu = false } = props;
     const [isSubNavOpen, setIsSubNavOpen] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const router = useRouter();
     const fieldPath = props['data-sb-field-path'];
 
     useEffect(() => {
+        // Set mounted state to true when component mounts on client
+        setIsMounted(true);
+        
         const handleRouteChange = () => {
             setIsSubNavOpen(false);
             document.body.style.overflow = 'unset';
@@ -310,27 +323,24 @@ function LinkWithSubnav(props) {
         };
     }, [router.events]);
 
+    // Mouse event handlers only used on client-side after hydration
+    const handleMouseLeave = !inMobileMenu && isMounted
+        ? () => { setIsSubNavOpen(false); }
+        : undefined;
+    
+    const handleMouseOver = !inMobileMenu && isMounted
+        ? () => { setIsSubNavOpen(true); }
+        : undefined;
+
     return (
         <li
             className={classNames('relative', inMobileMenu ? 'border-t py-3' : 'py-2 group')}
-            onMouseLeave={
-                !inMobileMenu
-                    ? () => {
-                          setIsSubNavOpen(false);
-                      }
-                    : undefined
-            }
+            onMouseLeave={handleMouseLeave}
             data-sb-field-path={fieldPath}
         >
             <button
                 aria-expanded={isSubNavOpen ? 'true' : 'false'}
-                onMouseOver={
-                    !inMobileMenu
-                        ? () => {
-                              setIsSubNavOpen(true);
-                          }
-                        : undefined
-                }
+                onMouseOver={handleMouseOver}
                 onClick={() => setIsSubNavOpen((prev) => !prev)}
                 className={classNames(
                     'sb-component',
