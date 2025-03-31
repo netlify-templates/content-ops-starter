@@ -10,6 +10,17 @@ import ChevronDownIcon from '../../svgs/chevron-down';
 import CloseIcon from '../../svgs/close';
 import MenuIcon from '../../svgs/menu';
 
+// Client-side only component to prevent hydration issues
+function ClientOnly({ children, fallback = null }) {
+  const [isClient, setIsClient] = useState(false);
+  
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
+  return isClient ? children : fallback;
+}
+
 export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
     return (
@@ -186,31 +197,34 @@ function HeaderLogoCenteredPrimaryCentered(props) {
 function MobileMenu(props) {
     const { title, logo, primaryLinks = [], secondaryLinks = [], colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isMounted, setIsMounted] = useState(false);
     const router = useRouter();
 
-    // Only modify the DOM after client-side hydration
+    // Functions that modify DOM state
     const openMobileMenu = () => {
         setIsMenuOpen(true);
-        if (isMounted) {
-            document.body.style.overflow = 'hidden';
-        }
     };
 
     const closeMobileMenu = () => {
         setIsMenuOpen(false);
-        if (isMounted) {
+    };
+    
+    // Effect to handle body overflow (only on client)
+    useEffect(() => {
+        // Only run this effect on the client
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
             document.body.style.overflow = 'unset';
         }
-    };
+        
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMenuOpen]);
 
     useEffect(() => {
-        // Component is now mounted on client
-        setIsMounted(true);
-        
         const handleRouteChange = () => {
             setIsMenuOpen(false);
-            document.body.style.overflow = 'unset';
         };
         router.events.on('routeChangeStart', handleRouteChange);
 
@@ -304,14 +318,10 @@ function ListOfLinks(props) {
 function LinkWithSubnav(props) {
     const { link, colors, inMobileMenu = false } = props;
     const [isSubNavOpen, setIsSubNavOpen] = useState(false);
-    const [isMounted, setIsMounted] = useState(false);
     const router = useRouter();
     const fieldPath = props['data-sb-field-path'];
-
+    
     useEffect(() => {
-        // Set mounted state to true when component mounts on client
-        setIsMounted(true);
-        
         const handleRouteChange = () => {
             setIsSubNavOpen(false);
             document.body.style.overflow = 'unset';
@@ -323,24 +333,26 @@ function LinkWithSubnav(props) {
         };
     }, [router.events]);
 
-    // Mouse event handlers only used on client-side after hydration
-    const handleMouseLeave = !inMobileMenu && isMounted
-        ? () => { setIsSubNavOpen(false); }
-        : undefined;
-    
-    const handleMouseOver = !inMobileMenu && isMounted
-        ? () => { setIsSubNavOpen(true); }
-        : undefined;
-
+    // Use two separate elements - one for server, one for client
+    // This prevents hydration mismatches completely
     return (
         <li
             className={classNames('relative', inMobileMenu ? 'border-t py-3' : 'py-2 group')}
-            onMouseLeave={handleMouseLeave}
             data-sb-field-path={fieldPath}
         >
+            {/* Only attach mouse events on the client side */}
+            <ClientOnly>
+                {!inMobileMenu && (
+                    <div 
+                        className="absolute inset-0 z-10" 
+                        onMouseLeave={() => setIsSubNavOpen(false)}
+                        onMouseOver={() => setIsSubNavOpen(true)}
+                    />
+                )}
+            </ClientOnly>
+            
             <button
                 aria-expanded={isSubNavOpen ? 'true' : 'false'}
-                onMouseOver={handleMouseOver}
                 onClick={() => setIsSubNavOpen((prev) => !prev)}
                 className={classNames(
                     'sb-component',
@@ -349,6 +361,8 @@ function LinkWithSubnav(props) {
                     link.labelStyle === 'secondary' ? 'sb-component-link-secondary' : 'sb-component-link-primary',
                     'inline-flex',
                     'items-center',
+                    'relative',
+                    'z-20',
                     inMobileMenu ? 'w-full' : 'text-sm',
                     {
                         'group-hover:no-underline hover:no-underline': !inMobileMenu && (link.labelStyle ?? 'primary') === 'primary',
