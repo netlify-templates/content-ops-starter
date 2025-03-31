@@ -314,7 +314,7 @@ function LinkWithSubnav(props) {
         <li
             className={classNames('relative', inMobileMenu ? 'border-t py-3' : 'py-2 group')}
             onMouseLeave={
-                !process.env.stackbitPreview && !inMobileMenu
+                !inMobileMenu
                     ? () => {
                           setIsSubNavOpen(false);
                       }
@@ -325,7 +325,7 @@ function LinkWithSubnav(props) {
             <button
                 aria-expanded={isSubNavOpen ? 'true' : 'false'}
                 onMouseOver={
-                    !process.env.stackbitPreview && !inMobileMenu
+                    !inMobileMenu
                         ? () => {
                               setIsSubNavOpen(true);
                           }
