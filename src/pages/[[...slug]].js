@@ -34,7 +34,7 @@ function Page(props) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 {site.favicon && <link rel="icon" href={site.favicon} />}
             </Head>
-            <PageLayout page={page} site={site} />;
+            <PageLayout page={page} site={site} />
         </>
     );
 }
