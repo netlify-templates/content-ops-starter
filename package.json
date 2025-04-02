@@ -17,8 +17,8 @@
         "markdown-to-jsx": "^7.7.3",
         "marked": "^14.1.2",
         "next": "15.2.4",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
         "swiper": "^11.1.4",
         "tailwindcss": "^3.4.3"
     },
@@ -27,8 +27,8 @@
         "@stackbit/cms-git": "^1.0.32",
         "@stackbit/types": "^2.1.10",
         "@types/glob": "^8.1.0",
-        "@types/react": "^19.0.4",
-        "@types/react-dom": "^19.0.1",
+        "@types/react": "^19.1.0",
+        "@types/react-dom": "^19.1.1",
         "autoprefixer": "^10.4.19",
         "prettier": "^3.3.2",
         "typescript": "^5.6.2"

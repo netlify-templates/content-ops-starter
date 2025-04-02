@@ -28,6 +28,23 @@ export default function BaseAutoComplete(props) {
 
                 panelRootRef.current.render(children);
             },
+            shouldPanelOpen: ({ state }) => {
+                return state.query !== '' || props.openOnFocus;
+            },
+            navigator: {
+                navigate({ itemUrl }) {
+                    window.location.assign(itemUrl);
+                },
+                navigateNewTab({ itemUrl }) {
+                    const windowReference = window.open(itemUrl, '_blank', 'noopener');
+                    if (windowReference) {
+                        windowReference.focus();
+                    }
+                },
+                navigateNewWindow({ itemUrl }) {
+                    window.open(itemUrl, '_blank', 'noopener');
+                }
+            },
             ...props
         });
 

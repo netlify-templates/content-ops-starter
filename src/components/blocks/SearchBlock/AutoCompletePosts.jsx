@@ -30,16 +30,24 @@ export default function AutoCompletePosts() {
                         item({ item, components }) {
                             return <ResultItem hit={item} components={components} />;
                         }
+                    },
+                    getItemUrl({ item }) {
+                        return item.url;
                     }
                 }
             ]}
+            onSelect={({ item }) => {
+                if (item.url) {
+                    window.location.href = item.url;
+                }
+            }}
         />
     );
 }
 
 export function ResultItem({ hit, components }) {
     return (
-        <a href={hit.url} className="aa-ItemLink">
+        <a href={hit.url} className="aa-ItemLink" tabIndex="0">
             <div className="aa-ItemContent">
                 <div className="aa-ItemTitle">
                     <components.Highlight hit={hit} attribute="title" />
