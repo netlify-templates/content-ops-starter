@@ -17,9 +17,19 @@ Netlify starter that's made for customization with a flexible content model, com
 
 ## Deploying to Netlify
 
-If you click "Deploy to Netlify" button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/content-ops-starter)
+[Smart Home Automation in Dubai](https://abodeautomation.ae/)
+[Smart home automation companies in Dubai](https://abodeautomation.ae/)
+[home automation companies dubai](https://abodeautomation.ae/)
+[Smart home company Dubai](https://abodeautomation.ae/)
+[Dubai smart home](https://abodeautomation.ae/)
+[best home automation company in Dubai](https://abodeautomation.ae/)
+[home automation system companies in Dubai](https://abodeautomation.ae/)
+[smart home systems Dubai](https://abodeautomation.ae/)
+[home automation installation Dubai](https://abodeautomation.ae/)
+[home automation installation company in Dubai](https://abodeautomation.ae/)
+[smart home solutions in Dubai](https://abodeautomation.ae/)
+[home automation installation services](https://abodeautomation.ae/)
 
 ## Develop with Netlify Visual Editor Locally
 
