@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Bible Study - Online Version</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-logout {
+            background-color: #e74c3c;
+        }
+
+        .btn-logout:hover {
+            background-color: #c0392b;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .auth-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .auth-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .success-message {
+            color: #27ae60;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .day-badge {
+            background-color: #d4a574;
+            color: white;
+            padding: 8px 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .question-number {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .text-input {
+            width: 100%;
+            min-height: 100px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .save-status {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #27ae60;
+            display: none;
+        }
+
+        .save-status.saving {
+            display: block;
+            color: #f39c12;
+        }
+
+        .save-status.saved {
+            display: block;
+            color: #27ae60;
+        }
+
+        .save-status.error {
+            display: block;
+            color: #e74c3c;
+        }
+
+        .progress-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #bdc3c7;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
+        .auth-toggle {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .auth-toggle a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .auth-toggle a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main App Container -->
+    <div id="app" style="display: none;">
+        <div class="container">
+            <div class="header">
+                <h1>📖 James Bible Study</h1>
+                <div class="user-info">
+                    <span id="userEmail"></span>
+                    <button class="btn btn-logout" onclick="logout()">Logout</button>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="progress-section">
+                    <h3>Your Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+                    </div>
+                    <p>You've completed <span id="progressText">0%</span> of this week's study</p>
+                </div>
+
+                <div class="day-badge">DAY ONE</div>
+                
+                <div class="question">
+                    <span class="save-status" id="status-q1">Saving...</span>
+                    <div class="question-number">
+                        1. Read James 1:1-8. What does James say about trials and how we should respond to them?
+                    </div>
+                    <textarea 
+                        class="text-input" 
+                        placeholder="Type your response here" 
+                        id="q1"
+                        data-question="q1"
+                    ></textarea>
+                </div>
+
+                <div class="question">
+                    <span class="save-status" id="status-q2">Saving...</span>
+                    <div class="question-number">
+                        2. What is the relationship between trials and wisdom according to this passage?
+                    </div>
+                    <textarea 
+                        class="text-input" 
+                        placeholder="Type your response here" 
+                        id="q2"
+                        data-question="q2"
+                    ></textarea>
+                </div>
+
+                <div class="question">
+                    <span class="save-status" id="status-q3">Saving...</span>
+                    <div class="question-number">
+                        3. How can you apply James' teaching about trials to a current challenge in your life?
+                    </div>
+                    <textarea 
+                        class="text-input" 
+                        placeholder="Type your response here" 
+                        id="q3"
+                        data-question="q3"
+                    ></textarea>
+                </div>
+
+                <div class="day-badge">DAY TWO</div>
+
+                <div class="question">
+                    <span class="save-status" id="status-q4">Saving...</span>
+                    <div class="question-number">
+                        4. Read James 1:9-18. What does James teach about temptation and its source?
+                    </div>
+                    <textarea 
+                        class="text-input" 
+                        placeholder="Type your response here" 
+                        id="q4"
+                        data-question="q4"
+                    ></textarea>
+                </div>
+
+                <div class="question">
+                    <span class="save-status" id="status-q5">Saving...</span>
+                    <div class="question-number">
+                        5. According to verse 17, what is the nature of God's gifts? How does this encourage you?
+                    </div>
+                    <textarea 
+                        class="text-input" 
+                        placeholder="Type your response here" 
+                        id="q5"
+                        data-question="q5"
+                    ></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Container -->
+    <div id="authContainer" class="auth-container">
+        <!-- Login Form -->
+        <div id="loginForm">
+            <h2>Login to Your Study</h2>
+            <form onsubmit="login(event)">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; padding: 12px;">
+                    Login
+                </button>
+            </form>
+            <div id="loginError" class="error-message"></div>
+            <div class="auth-toggle">
+                Don't have an account? <a href="#" onclick="showSignup()">Sign up</a>
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" style="display: none;">
+            <h2>Create Your Account</h2>
+            <form onsubmit="signup(event)">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="signupPassword" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirmPassword" required minlength="6">
+                </div>
+                <button type="submit" class="btn" style="width: 100%; padding: 12px;">
+                    Create Account
+                </button>
+            </form>
+            <div id="signupError" class="error-message"></div>
+            <div id="signupSuccess" class="success-message"></div>
+            <div class="auth-toggle">
+                Already have an account? <a href="#" onclick="showLogin()">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading your study...</p>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAd6w-OZx1oQpZ4DmWYqi7jpGULlht6dhY",
+            authDomain: "james-bible-study.firebaseapp.com",
+            projectId: "james-bible-study",
+            storageBucket: "james-bible-study.firebasestorage.app",
+            messagingSenderId: "172028681652",
+            appId: "1:172028681652:web:ce71ca95d9b4395e14a6e1"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        let currentUser = null;
+        let saveTimeout = null;
+
+        // Auth State Observer
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                currentUser = user;
+                showApp();
+                loadResponses();
+            } else {
+                currentUser = null;
+                showAuth();
+            }
+        });
+
+        // Show/Hide Functions
+        function showApp() {
+            document.getElementById('authContainer').style.display = 'none';
+            document.getElementById('loadingScreen').style.display = 'none';
+            document.getElementById('app').style.display = 'block';
+            document.getElementById('userEmail').textContent = currentUser.email;
+        }
+
+        function showAuth() {
+            document.getElementById('authContainer').style.display = 'block';
+            document.getElementById('loadingScreen').style.display = 'none';
+            document.getElementById('app').style.display = 'none';
+        }
+
+        function showLoading() {
+            document.getElementById('authContainer').style.display = 'none';
+            document.getElementById('loadingScreen').style.display = 'block';
+            document.getElementById('app').style.display = 'none';
+        }
+
+        function showSignup() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signupForm').style.display = 'block';
+            clearErrors();
+        }
+
+        function showLogin() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('signupForm').style.display = 'none';
+            clearErrors();
+        }
+
+        function clearErrors() {
+            document.getElementById('loginError').textContent = '';
+            document.getElementById('signupError').textContent = '';
+            document.getElementById('signupSuccess').textContent = '';
+        }
+
+        // Authentication Functions
+        async function login(event) {
+            event.preventDefault();
+            clearErrors();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            try {
+                showLoading();
+                await auth.signInWithEmailAndPassword(email, password);
+            } catch (error) {
+                showAuth();
+                document.getElementById('loginError').textContent = error.message;
+            }
+        }
+
+        async function signup(event) {
+            event.preventDefault();
+            clearErrors();
+            
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                document.getElementById('signupError').textContent = 'Passwords do not match';
+                return;
+            }
+            
+            try {
+                showLoading();
+                await auth.createUserWithEmailAndPassword(email, password);
+                
+                // Create initial user document
+                await db.collection('users').doc(auth.currentUser.uid).set({
+                    email: email,
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                    progress: {}
+                });
+                
+            } catch (error) {
+                showAuth();
+                document.getElementById('signupError').textContent = error.message;
+            }
+        }
+
+        async function logout() {
+            try {
+                await auth.signOut();
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+        }
+
+        // Response Handling
+        async function saveResponse(questionId, value) {
+            if (!currentUser) return;
+            
+            const statusElement = document.getElementById(`status-${questionId}`);
+            statusElement.className = 'save-status saving';
+            statusElement.textContent = 'Saving...';
+            
+            try {
+                await db.collection('users').doc(currentUser.uid)
+                    .collection('responses').doc(questionId).set({
+                        response: value,
+                        updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+                        week: 1,
+                        questionId: questionId
+                    });
+                
+                statusElement.className = 'save-status saved';
+                statusElement.textContent = '✓ Saved';
+                
+                // Hide status after 2 seconds
+                setTimeout(() => {
+                    statusElement.className = 'save-status';
+                }, 2000);
+                
+                updateProgress();
+            } catch (error) {
+                console.error('Save error:', error);
+                statusElement.className = 'save-status error';
+                statusElement.textContent = 'Error saving';
+            }
+        }
+
+        async function loadResponses() {
+            if (!currentUser) return;
+            
+            try {
+                const snapshot = await db.collection('users').doc(currentUser.uid)
+                    .collection('responses').get();
+                
+                snapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const textarea = document.getElementById(data.questionId);
+                    if (textarea) {
+                        textarea.value = data.response;
+                    }
+                });
+                
+                updateProgress();
+            } catch (error) {
+                console.error('Load error:', error);
+            }
+        }
+
+        function updateProgress() {
+            const textareas = document.querySelectorAll('.text-input');
+            let completed = 0;
+            
+            textareas.forEach(textarea => {
+                if (textarea.value.trim().length > 0) {
+                    completed++;
+                }
+            });
+            
+            const percentage = Math.round((completed / textareas.length) * 100);
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = percentage + '%';
+        }
+
+        // Auto-save setup
+        document.addEventListener('DOMContentLoaded', () => {
+            const textareas = document.querySelectorAll('.text-input');
+            
+            textareas.forEach(textarea => {
+                textarea.addEventListener('input', () => {
+                    clearTimeout(saveTimeout);
+                    saveTimeout = setTimeout(() => {
+                        saveResponse(textarea.dataset.question, textarea.value);
+                    }, 1000); // Save after 1 second of inactivity
+                });
+            });
+        });
+    </script>
+</body>
+</html>
