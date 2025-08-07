@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zéka Créations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f1;
+      color: #333;
+    }
+    header {
+      background-color: #e07a5f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .btn {
+      background-color: #e07a5f;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body><header>
+  <h1>Zéka Créations</h1>
+  <p>Sandales & accessoires pour un style frais et tendance ☀️</p>
+  <nav>
+    <a href="#produits">Produits</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header><section id="produits">
+  <h2>Nos Produits</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200x200?text=Sandale+1" alt="Sandale 1">
+      <h3>Sandale Bohème</h3>
+      <p>8 000 FCFA</p>
+      <a class="btn" href="https://wa.me/225000000000">Commander</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x200?text=SAC+PAILLE" alt="Sac Paille">
+      <h3>Sac en paille</h3>
+      <p>5 000 FCFA</p>
+      <a class="btn" href="https://wa.me/225000000000">Commander</a>
+    </div>
+  </div>
+</section><section id="apropos">
+  <h2>À propos</h2>
+  <p>Zéka Créations est une marque ivoirienne qui propose des sandales et accessoires pour femmes au style frais, léger et tendance. Inspirés par le soleil, la plage et la beauté simple du quotidien, nos produits sont pensés pour sublimer votre look en toute saison.</p>
+</section><section id="contact">
+  <h2>Contact</h2>
+  <p>📍 Abidjan, Côte d’Ivoire</p>
+  <p>📱 WhatsApp : <a href="https://wa.me/225000000000">+225 00 00 00 000</a></p>
+  <p>📸 Instagram : <a href="#">@zeka.creations</a></p>
+  <p>📘 Facebook : <a href="#">Zéka Créations</a></p>
+</section><footer>
+  <p>&copy; 2025 Zéka Créations - Tous droits réservés</p>
+</footer></body>
+</html>
