@@ -26,7 +26,7 @@
         "@base2/pretty-print-object": "^1.0.2",
         "@stackbit/cms-git": "^1.0.32",
         "@stackbit/types": "^2.1.10",
-        "@types/glob": "^8.1.0",
+        "@types/glob": "^9.0.0",
         "@types/react": "^19.1.0",
         "@types/react-dom": "^19.1.1",
         "autoprefixer": "^10.4.19",
