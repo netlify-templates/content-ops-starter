@@ -11,17 +11,9 @@
     },
     "primaryLinks": [
         {
-            "label": "Pricing",
-            "url": "/pricing",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Blog",
-            "altText": "Blog",
-            "url": "/blog",
+            "label": "Resources",
+            "altText": "Resources",
+            "url": "/Resources",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
@@ -37,28 +29,28 @@
             "type": "Link"
         },
         {
-            "label": "Dropdown",
-            "altText": "Dropdown",
+            "label": "Services", //Dropdown
+            "altText": "Servies",
             "links": [
                 {
-                    "label": "Dropdown item",
-                    "url": "/",
+                    "label": "Consulting",
+                    "url": "/Consulting",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
                     "type": "Link"
                 },
                 {
-                    "label": "Dropdown item",
-                    "url": "/",
+                    "label": "Staffing",
+                    "url": "/Staffing",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
                     "type": "Link"
                 },
                 {
-                    "label": "Dropdown item",
-                    "url": "/",
+                    "label": "Evaluation",
+                    "url": "/Evaluation",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
