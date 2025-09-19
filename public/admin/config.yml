@@ -1,0 +1,30 @@
+backend:
+name: git-gateway
+branch: main # The branch your repo uses (usually 'main')
+
+# This line is critical for the CMS to find your repo.
+# Format is: your-github-username/your-repo-name
+repo: AIConsultingEchelon/content-ops-starter
+
+# This enables Netlify Identity for login
+local_backend: true
+
+# This is where the CMS will be accessed: yoursite.netlify.app/admin/
+publish_mode: editorial_workflow
+media_folder: "public/images/uploads" # Folder where uploaded images go
+public_folder: "/images/uploads" # Path for image URLs
+
+collections:
+# Name for our first content type: "Pages"
+- name: "pages"
+label: "Pages"
+files:
+# This is the file for the homepage
+- name: "home"
+label: "Homepage"
+file: "src/content/home.json" # File where content will be saved
+fields:
+# The fields you want to be editable
+- { label: "Main Headline", name: "title", widget: "string" }
+- { label: "Subheading", name: "subhead", widget: "string" }
+- { label: "Body Text", name: "body", widget: "markdown" }
