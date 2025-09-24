@@ -4,30 +4,30 @@
         "altText": "Logo light",
         "type": "ImageBlock"
     },
-    "text": "A description of your brand",
+    "text": "Rajawin Rajanya Game Online Terbaik",
     "primaryLinks": {
         "title": "Product",
         "links": [
             {
-                "label": "Features",
-                "altText": "Features page",
-                "url": "/",
+                "label": "Rajawinner",
+                "altText": "rajawinner",
+                "url": "https://rajawinner.com",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Pricing",
-                "url": "/pricing",
+                "label": "Rajawin303",
+                "url": "https://rajawin303.online",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Documentation",
-                "url": "/",
+                "label": "Rajawin",
+                "url": "https://rajawin.id",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -37,12 +37,12 @@
         "type": "FooterLinksGroup"
     },
     "secondaryLinks": {
-        "title": "Company",
+        "title": "Rajawin Pemimpin Industri Gaming",
         "links": [
             {
-                "label": "Careers",
+                "label": "Rajawin",
                 "altText": "careers page",
-                "url": "/careers",
+                "url": "https://rajawin.agency",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
