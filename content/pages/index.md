@@ -1,17 +1,15 @@
 ---
-title: Home
+title: Rajawin
 slug: /
 sections:
   - type: GenericSection
     title:
-      text: Unblock your team boost your time to production
+      text: Serunya Game Aplikasi Legal yang Bikin Ketagihan
       color: text-dark
       type: TitleBlock
-    subtitle: Subtitle goes here
+    subtitle: Main Rajawin pasti win
     text: >
-      A Netlify Create website is a git repo that you own. Every code commit is
-      instantly reflected in the visual editor and since every visual edit is a
-      git commit, git workflows and collaboration just work.
+     Rajawin adalah sebuah aplikasi game berbasis mobile yang dirancang untuk pecinta hiburan digital. Dengan tampilan modern, navigasi yang mudah, serta koleksi game beragam, Rajawin berhasil menjadi salah satu aplikasi pilihan pemain yang mencari keseruan sekaligus rasa aman saat bermain.
     actions:
       - label: Get started
         altText: ''
@@ -33,11 +31,11 @@ sections:
         type: Link
     media:
       url: /images/main-hero.svg
-      altText: Unblock your team boost your time to production preview
+      altText: Mengapa Slogan "Main Rajawin Pasti Win
       elementId: ''
       type: ImageBlock
     badge:
-      label: This is a badge
+      label: win tiap hari
       color: text-primary
       type: Badge
     elementId: ''
@@ -59,15 +57,13 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Subtitle goes here
+    subtitle: Rajawin Rajawin303 Rajawin77 Rajawin4d
     items:
       - type: FeaturedItem
         title: 500k
         subtitle: Numbers Done
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Berbeda dengan platform lain yang penuh risiko, Rajawin mengusung konsep aplikasi legal. Artinya, pemain bisa menikmati permainan tanpa rasa was-was karena sistemnya diawasi sesuai standar yang berlaku.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
@@ -84,7 +80,7 @@ sections:
             textAlign: left
         image:
           type: ImageBlock
-          altText: Lightning bolt symbol on red background
+          altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
           elementId: ''
           url: /images/icon1.svg
           styles:
@@ -98,7 +94,7 @@ sections:
           explicabo.
         image:
           url: /images/icon2.svg
-          altText: Featured icon two
+          altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
           elementId: ''
           type: ImageBlock
         actions: []
@@ -123,7 +119,7 @@ sections:
           explicabo.
         image:
           url: /images/icon3.svg
-          altText: Featured icon three
+          altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
           elementId: ''
           type: ImageBlock
         actions: []
@@ -140,7 +136,7 @@ sections:
         type: FeaturedItem
     actions:
       - label: Get started
-        altText: ''
+        altText: 'rajawin rajawin303 rajawin138 rajawin4d rajawin77'
         url: /
         showIcon: false
         icon: arrowRight
@@ -171,25 +167,25 @@ sections:
   - subtitle: Award winning enterprises trust us
     images:
       - url: /images/empathy-logo.svg
-        altText: Empathy logo
+        altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
         type: ImageBlock
       - url: /images/wellster-logo.svg
-        altText: Wellster logo
+        altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
         type: ImageBlock
       - url: /images/vise-logo.svg
-        altText: Vise logo
+        altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
         type: ImageBlock
       - url: /images/telus-logo.svg
-        altText: Telus logo
+        altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
         type: ImageBlock
       - url: /images/contenful-logo.svg
-        altText: Contentful logo
+        altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
         type: ImageBlock
       - url: /images/sanity-logo.svg
-        altText: Sanity logo
+        altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
         type: ImageBlock
       - url: /images/rangle-logo.svg
-        altText: Rangle logo
+        altText: rajawin rajawin303 rajawin138 rajawin4d rajawin77
         type: ImageBlock
     motion: move-to-left
     colors: bg-light-fg-dark
@@ -234,15 +230,12 @@ sections:
       styles:
         self:
           textAlign: center
-      type: TitleBlock
-    subtitle: This is a subtitle
+      type: Rajawin303
+    subtitle: platform terbaik
     text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+     Rajawin303 bukan hanya sekadar aplikasi game. Ia adalah simbol dari hiburan digital yang legal, aman, dan menyenangkan. Dengan motto Main Rajawin Pasti Win, aplikasi ini berhasil membuktikan bahwa menang bukan hanya soal hasil akhir, melainkan juga soal pengalaman bermain yang berkesan.
     media:
-      title: Title of the video
+      title: Rajawin77
       url: /images/placeholder-video.mp4
       controls: false
       aspectRatio: '16:9'
@@ -284,15 +277,12 @@ sections:
         self:
           textAlign: left
       type: TitleBlock
-    subtitle: Section with a video subtitle
+    subtitle: Rajawin77 Situs Gampang Menangnya
     text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+     Dunia hiburan digital terus berkembang, dan salah satu nama yang mulai dikenal luas di kalangan gamer adalah Rajawin77. Platform ini hadir bukan hanya sebagai sarana hiburan, tetapi juga sebagai wadah komunitas pemain yang mencari pengalaman bermain aman, menyenangkan, dan tentunya legal.
     actions: []
     media:
-      title: Title of the video
+      title: Rajawin77 Pokoknya terbaik
       url: /images/placeholder-video.mp4
       autoplay: true
       loop: true
@@ -325,10 +315,9 @@ sections:
       type: TitleBlock
     subtitle: Increase your reach
     text: >
-      A service that helps businesses to manage their social media accounts and
-      posts.
+      Rajawin77 merupakan aplikasi sekaligus portal game online yang dirancang untuk memberi pengalaman bermain terbaik bagi penggunanya
     actions:
-      - label: Get started
+      - label: Daftar Sekarang
         url: /
         icon: arrowRight
         iconPosition: right
@@ -343,7 +332,7 @@ sections:
         type: Link
     media:
       url: /images/hero2.svg
-      altText: Fun feature preview
+      altText: rajawin77
       type: ImageBlock
     badge:
       label: This is a badge
@@ -360,10 +349,9 @@ sections:
       type: TitleBlock
     subtitle: Be in good company
     text: >
-      A service that provides advice and guidance to startups and small
-      businesses.
+      Dengan berbagai pilihan permainan menarik, Rajawin138 berhasil menjadi favorit di kalangan gamer yang mengutamakan kenyamanan sekaligus keamanan.
     actions:
-      - label: Get started
+      - label: Daftar
         url: /
         icon: arrowRight
         iconPosition: right
@@ -378,7 +366,7 @@ sections:
         type: Link
     media:
       url: /images/hero3.svg
-      altText: Dope design preview
+      altText: rajawin138
       type: ImageBlock
     badge:
       label: This is a badge
@@ -402,20 +390,17 @@ sections:
     type: DividerSection
   - type: CarouselSection
     title: null
-    subtitle: What our customers say about us
+    subtitle: Rajawin138 main aman hati nyaman
     items:
       - title: >-
-          “A designer knows he has achieved perfection not when there is nothing
-          left to add, but when there is nothing left to take away.”
+          “Banyak aplikasi game di luar sana, tapi tidak semuanya bisa memberi rasa aman. Rajawin138 menempatkan keamanan data dan kepuasan pemain sebagai prioritas. Ditambah dengan legalitas yang jelas, aplikasi ini memberi ruang aman bagi siapa saja yang ingin menikmati hiburan digital tanpa rasa was-was..”
         tagline: Testimonial 1
         subtitle: 'Maria Walters, Company'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Filosofi Rajawin303 jelas: setiap pemain berhak merasakan kemenangan, baik berupa skor tinggi, pengalaman seru, maupun hadiah eksklusif..
         image:
           url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          altText: rajawin303
           styles:
             self:
               borderRadius: full
@@ -435,16 +420,14 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design is a plan for arranging elements in such a way as best to accomplish a particular purpose."
+          "Interface aplikasi dibuat sederhana, nyaman, dan mudah dipahami, bahkan untuk pemain baru sekalipun.."
         tagline: Testimonial 2
         subtitle: 'John Doe, Company'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+         Rajawin303 bukan sekadar aplikasi game online, melainkan portal hiburan digital yang legal, aman, dan seru. Dengan tagline Main Pasti Win, Rajawin303 berhasil membangun citra sebagai platform yang selalu memberikan pengalaman bermain terbaik bagi penggunanya.
         image:
           url: /images/person-placeholder-light.png
-          altText: John Doe
+          altText: Rajawin4d
           styles:
             self:
               borderRadius: full
@@ -464,16 +447,14 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design is how it works, how it functions. Good design doesn't just make a product aesthetically pleasing, it makes it a pleasure to use."
+          "Kehadiran aplikasi dan portal game online membuat siapa pun bisa bermain kapan saja, di mana saja. Salah satu nama yang mulai mencuri perhatian adalah Rajawin4D."
         tagline: Testimonial 3
-        subtitle: 'Maria Walters, Company'
+        subtitle: 'Rajawin4D'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Rajawin4D adalah portal game online berbasis teknologi terbaru yang menawarkan pilihan permainan beragam untuk semua kalangan. Nama 4D sendiri menggambarkan pengalaman bermain yang lebih immersive, lengkap dengan visual yang menarik serta sistem permainan yang menantang.
         image:
           url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          altText: rajawin138
           styles:
             self:
               borderRadius: full
@@ -493,17 +474,14 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          “A designer knows he has achieved perfection not when there is nothing
-          left to add, but when there is nothing left to take away.”
+          “Rajawin4D mengusung misi untuk menghadirkan hiburan digital yang aman, transparan, dan menyenangkan.”
         tagline: Testimonial 4
-        subtitle: 'Maria Walters, Company'
+        subtitle: 'Rajawin88, Company'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          Sama seperti saudaranya Rajawin303, Rajawin4D membawa semangat bahwa setiap pemain bisa merasakan kemenangan. Bukan hanya soal hasil akhir, tapi juga kepuasan dan pengalaman menyenangkan selama bermain.
         image:
           url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          altText: rajawin88
           styles:
             self:
               borderRadius: full
@@ -523,16 +501,14 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          "Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated."
+          "DLebih dari sekadar game, Rajawin4D juga membangun ruang komunitas yang memungkinkan pemain saling berbagi tips, trik, dan pengalaman."
         tagline: Testimonial 5
-        subtitle: 'Jane Walters, Company'
+        subtitle: 'raja win 4D, Company'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+          ajawin4D hadir sebagai jawaban bagi pemain yang mencari hiburan digital modern dengan jaminan keamanan dan kenyamanan
         image:
           url: /images/person-placeholder-light.png
-          altText: Maria Walters
+          altText: rajawin303
           styles:
             self:
               borderRadius: full
@@ -552,16 +528,14 @@ sections:
             justifyContent: center
         type: FeaturedItem
       - title: >-
-          “Quote from some important person goes right here. I love using Netlify Create.”
+          “perkembangan dunia hiburan digital, hadir sebuah nama yang semakin populer di kalangan pecinta game online, yaitu Rajawin.”
         tagline: Testimonial 6
-        subtitle: 'Jane Doe, Company'
+        subtitle: 'rajawin, Company'
         text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+         Platform ini bukan sekadar tempat bermain, melainkan sebuah portal hiburan yang membawa misi menghadirkan pengalaman bermain yang aman, legal, dan penuh keseruan.
         image:
           url: /images/img-placeholder-dark.png
-          altText: Jane Doe
+          altText: rajawin303
           styles:
             self:
               borderRadius: full
@@ -597,14 +571,14 @@ sections:
       type: TitleBlock
     subtitle: Featured items section subtitle
     items:
-      - title: Feature Item One
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
+      - title: Fitur terlengkap rajawin
+        tagline: Rajawin ungul dari semua kompetitor
+        subtitle: Legal & Terpercaya
         text: |
-          Follow the tutorial to build your first Netlify Create site.
+          Rajawin menjunjung tinggi legalitas, sehingga pemain bisa fokus bermain tanpa rasa was-was.
         image:
           url: /images/abstract-feature1.svg
-          altText: Placeholder Image
+          altText: rajawin
           styles:
             self:
               borderRadius: x-large
@@ -620,14 +594,14 @@ sections:
             borderRadius: x-large
             flexDirection: col
         type: FeaturedItem
-      - title: Feature Item Two
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
+      - title: Pilihan Game Lengkap
+        tagline: Koleksi Gaming Lengkap semua ada
+        subtitle: Rajawin Kumpulan Gamenya Banyak
         text: |
-          Follow the tutorial to build your first awesome Netlify Create site.
+          Dari game strategi, arcade, hingga puzzle seru tersedia di platform ini.
         image:
           url: /images/abstract-feature2.svg
-          altText: Placeholder image
+          altText: game rajawin lengkap
           styles:
             self:
               borderRadius: x-large
@@ -643,14 +617,14 @@ sections:
             borderRadius: x-large
             flexDirection: col
         type: FeaturedItem
-      - title: Feature Item Three
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
+      - title: Keamanan Data Terjamin
+        tagline: Karena PRivasi adalah rahasia pribadi
+        subtitle: Kami jaga rahasia data anda dengan aman
         text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
+          Sistem enkripsi canggih memastikan privasi dan keamanan setiap pemain tetap terlindungi.
         image:
           url: /images/abstract-feature1.svg
-          altText: Placeholder image
+          altText: Keamanan Data Terjamin
           styles:
             self:
               borderRadius: x-large
@@ -680,15 +654,12 @@ sections:
         textAlign: center
     type: FeaturedItemsSection
   - title:
-      text: Generic Section With A Form
+      text: Revolusi Portal Game Online dengan Filosofi Main Pasti Win
       color: text-dark
       type: TitleBlock
-    subtitle: Section with a form subtitle
+    subtitle: Revolusi Portal Game Online dengan Filosofi Main Pasti Win
     text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+      Di tengah persaingan ketat industri hiburan digital, nama Rajawin mencuat sebagai salah satu platform yang berani tampil beda. Bukan sekadar janji kosong, Rajawin menghadirkan konsep hiburan online modern yang memadukan legalitas, keamanan, teknologi, dan komunitas dalam satu genggaman.
     media:
       fields:
         - name: name
@@ -739,8 +710,8 @@ sections:
     colors: bg-light-fg-dark
     type: GenericSection
 seo:
-  metaTitle: Home - Demo site
-  metaDescription: This demo site is built with Netlify Create.
+  metaTitle: Rajawin: Revolusi Portal Game Online dengan Filosofi Main Pasti Win
+  metaDescription: Rajawin mencuat sebagai salah satu platform yang berani tampil beda. Bukan sekadar janji kosong, Rajawin menghadirkan konsep hiburan online modern yang memadukan legalitas, keamanan, teknologi, dan komunitas dalam satu genggaman.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
