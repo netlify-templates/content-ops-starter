@@ -1,0 +1,453 @@
+import React from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BookOpen, BrainCircuit, Calculator, CheckCircle, ChevronDown, ChevronUp, Clock, Coffee, Heart, HelpCircle, ListTodo, Play, Pause, RefreshCw, Smile, Target, Zap } from 'lucide-react';
+
+// Helper Functions & Hooks
+const useLocalStorage = (key, initialValue) => {
+  const [storedValue, setStoredValue] = useState(() => {
+    try {
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      console.error(error);
+      return initialValue;
+    }
+  });
+
+  const setValue = (value) => {
+    try {
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return [storedValue, setValue];
+};
+
+// Custom Modal for alerts
+const CustomAlert = ({ message, onClose }) => {
+    if (!message) return null;
+
+    return (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+                <p className="text-gray-800 mb-4">{message}</p>
+                <button
+                    onClick={onClose}
+                    className="bg-yellow-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300"
+                >
+                    OK
+                </button>
+            </div>
+        </div>
+    );
+};
+
+
+// Components
+
+const PomodoroTimer = ({ setTotalStudyTime }) => {
+  const [studyDuration, setStudyDuration] = useLocalStorage('pomodoro:studyDuration', 20);
+  const [timeLeft, setTimeLeft] = useLocalStorage('pomodoro:timeLeft', 20 * 60);
+  const [isActive, setIsActive] = useLocalStorage('pomodoro:isActive', false);
+  const [mode, setMode] = useLocalStorage('pomodoro:mode', 'study'); // study, break, longBreak
+  const [round, setRound] = useLocalStorage('pomodoro:round', 1);
+  const [alertMessage, setAlertMessage] = useState('');
+
+
+  const breakDuration = useMemo(() => Math.floor(studyDuration * 0.2 * 60), [studyDuration]);
+  const longBreakDuration = useMemo(() => Math.floor((studyDuration * 4) * 0.2 * 60), [studyDuration]);
+
+  const handleTimerEnd = useCallback(() => {
+    setIsActive(false);
+    setAlertMessage('Time is up! Remember to have a glass of water to stay hydrated.');
+    if (mode === 'study') {
+      if (round < 4) {
+        setMode('break');
+        setTimeLeft(breakDuration);
+        setRound(r => r + 1);
+      } else {
+        setMode('longBreak');
+        setTimeLeft(longBreakDuration);
+        setRound(1);
+      }
+    } else {
+      setMode('study');
+      setTimeLeft(studyDuration * 60);
+    }
+  }, [mode, round, breakDuration, longBreakDuration, studyDuration]);
+
+  useEffect(() => {
+    let interval = null;
+    if (isActive && timeLeft > 0) {
+      interval = setInterval(() => {
+        setTimeLeft(timeLeft - 1);
+        if (mode === 'study') {
+          setTotalStudyTime(prev => prev + 1);
+        }
+      }, 1000);
+    } else if (isActive && timeLeft === 0) {
+      handleTimerEnd();
+    }
+    return () => clearInterval(interval);
+  }, [isActive, timeLeft, mode, setTotalStudyTime, handleTimerEnd]);
+
+  const toggleTimer = () => {
+    setIsActive(!isActive);
+  };
+
+  const resetTimer = () => {
+    setIsActive(false);
+    setMode('study');
+    setRound(1);
+    setTimeLeft(studyDuration * 60);
+  };
+  
+  const handleDurationChange = (e) => {
+      const newDuration = parseInt(e.target.value, 10);
+      if (!isNaN(newDuration) && newDuration > 0) {
+          setStudyDuration(newDuration);
+          if (!isActive) {
+              setTimeLeft(newDuration * 60);
+          }
+      }
+  }
+
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  const progress = (mode === 'study' ? (studyDuration * 60 - timeLeft) / (studyDuration * 60) :
+                   mode === 'break' ? (breakDuration - timeLeft) / breakDuration :
+                   (longBreakDuration - timeLeft) / longBreakDuration) * 100;
+
+  return (
+    <>
+      <CustomAlert message={alertMessage} onClose={() => setAlertMessage('')} />
+      <div className="bg-white/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-yellow-200">
+        <h3 className="text-xl font-bold text-yellow-800 mb-4 flex items-center"><Clock className="mr-2" /> Pomodoro Timer</h3>
+        <div className="text-center">
+          <div className="relative w-48 h-48 mx-auto mb-4">
+            <svg className="w-full h-full" viewBox="0 0 100 100">
+              <circle className="text-yellow-200" strokeWidth="7" stroke="currentColor" fill="transparent" r="45" cx="50" cy="50" />
+              <circle
+                className="text-yellow-600"
+                strokeWidth="7"
+                strokeLinecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="45"
+                cx="50"
+                cy="50"
+                style={{ strokeDasharray: 283, strokeDashoffset: 283 - (progress / 100) * 283, transition: 'stroke-dashoffset 0.5s ease-out' }}
+                transform="rotate(-90 50 50)"
+              />
+            </svg>
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <p className="text-4xl font-mono text-yellow-900">{formatTime(timeLeft)}</p>
+              <p className="text-sm font-semibold uppercase tracking-wider text-yellow-700">{mode} - Round {round}</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center space-x-4">
+            <button onClick={toggleTimer} className="p-3 bg-yellow-500 text-white rounded-full shadow-md hover:bg-yellow-600 transition-all duration-300">
+              {isActive ? <Pause size={24} /> : <Play size={24} />}
+            </button>
+            <button onClick={resetTimer} className="p-3 bg-yellow-200 text-yellow-800 rounded-full shadow-md hover:bg-yellow-300 transition-all duration-300">
+              <RefreshCw size={24} />
+            </button>
+          </div>
+        </div>
+        <div className="mt-6">
+          <label htmlFor="study-duration" className="block text-sm font-medium text-yellow-800 mb-1">Study Duration (minutes)</label>
+          <input
+            id="study-duration"
+            type="number"
+            value={studyDuration}
+            onChange={handleDurationChange}
+            className="w-full p-2 border border-yellow-300 rounded-lg bg-white/50 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+            disabled={isActive}
+          />
+        </div>
+      </div>
+    </>
+  );
+};
+
+const SpacedRepetition = () => {
+    const [topics, setTopics] = useLocalStorage('srs:topics', []);
+    const [newTopic, setNewTopic] = useState('');
+    const today = useMemo(() => new Date().setHours(0, 0, 0, 0), []);
+
+    const scheduleReviews = (startDate) => {
+        const intervals = [1, 3, 5, 7, 14, 21, 28, 30];
+        const start = new Date(startDate);
+        return intervals.map(day => {
+            const reviewDate = new Date(start);
+            reviewDate.setDate(start.getDate() + day);
+            return { date: reviewDate.toISOString().split('T')[0], completed: false };
+        });
+    };
+
+    const addTopic = () => {
+        if (newTopic.trim() === '') return;
+        const startDate = new Date().toISOString().split('T')[0];
+        setTopics([...topics, {
+            id: Date.now(),
+            name: newTopic,
+            startDate,
+            reviews: scheduleReviews(startDate)
+        }]);
+        setNewTopic('');
+    };
+    
+    const toggleCompletion = (topicId, reviewDateStr) => {
+        setTopics(topics.map(topic => {
+            if (topic.id === topicId) {
+                const updatedReviews = topic.reviews.map(review => {
+                    if (review.date === reviewDateStr) {
+                        return { ...review, completed: !review.completed };
+                    }
+                    return review;
+                });
+                return { ...topic, reviews: updatedReviews };
+            }
+            return topic;
+        }));
+    };
+
+    const upcomingRevisions = useMemo(() => {
+        return topics.flatMap(topic => 
+            topic.reviews
+                .filter(r => !r.completed && new Date(r.date).setHours(0,0,0,0) >= today)
+                .map(r => ({ ...r, topicName: topic.name, topicId: topic.id }))
+        ).sort((a, b) => new Date(a.date) - new Date(b.date));
+    }, [topics, today]);
+
+    const pendingRevisions = useMemo(() => {
+        return topics.flatMap(topic => 
+            topic.reviews
+                .filter(r => !r.completed && new Date(r.date).setHours(0,0,0,0) < today)
+                .map(r => ({ ...r, topicName: topic.name, topicId: topic.id }))
+        ).sort((a, b) => new Date(a.date) - new Date(b.date));
+    }, [topics, today]);
+
+    const RevisionList = ({ title, revisions, isPending }) => (
+        <div className="mt-4">
+            <h4 className={`text-lg font-semibold ${isPending ? 'text-red-600' : 'text-yellow-800'}`}>{title} ({revisions.length})</h4>
+            {revisions.length > 0 ? (
+                <ul className="mt-2 space-y-2 max-h-48 overflow-y-auto pr-2">
+                    {revisions.map((rev, index) => (
+                        <li key={`${rev.topicId}-${rev.date}-${index}`} className="flex items-center justify-between bg-white/60 p-2 rounded-lg">
+                           <span className="text-sm text-gray-700">
+                                <strong className="font-medium text-gray-900">{rev.topicName}</strong> - {new Date(rev.date).toLocaleDateString()}
+                            </span>
+                            <button onClick={() => toggleCompletion(rev.topicId, rev.date)} className="text-green-600 hover:text-green-800">
+                                <CheckCircle size={18} />
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p className="text-sm text-gray-500 mt-2">No {title.toLowerCase()} for now.</p>
+            )}
+        </div>
+    );
+
+    return (
+        <div className="bg-white/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-yellow-200">
+            <h3 className="text-xl font-bold text-yellow-800 mb-4 flex items-center"><BrainCircuit className="mr-2" /> Spaced Repetition</h3>
+            <div className="flex space-x-2">
+                <input
+                    type="text"
+                    value={newTopic}
+                    onChange={(e) => setNewTopic(e.target.value)}
+                    placeholder="Enter new topic to study"
+                    className="flex-grow p-2 border border-yellow-300 rounded-lg bg-white/50 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                />
+                <button onClick={addTopic} className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300">Add</button>
+            </div>
+            <RevisionList title="Upcoming Revisions" revisions={upcomingRevisions} />
+            <RevisionList title="Pending Revisions" revisions={pendingRevisions} isPending />
+        </div>
+    );
+};
+
+const Countdown = () => {
+    const [endDate, setEndDate] = useLocalStorage('countdown:endDate', new Date(new Date().getFullYear() + 1, 4, 5).toISOString());
+    const [timeLeft, setTimeLeft] = useState({});
+
+    const calculateTimeLeft = useCallback(() => {
+        const difference = +new Date(endDate) - +new Date();
+        let timeLeftData = {};
+
+        if (difference > 0) {
+            timeLeftData = {
+                days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                minutes: Math.floor((difference / 1000 / 60) % 60),
+                seconds: Math.floor((difference / 1000) % 60)
+            };
+        }
+        return timeLeftData;
+    }, [endDate]);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+        return () => clearTimeout(timer);
+    });
+
+    const timerComponents = Object.keys(timeLeft).map(interval => {
+        if (timeLeft[interval] === undefined) {
+            return null;
+        }
+        return (
+            <div key={interval} className="flex flex-col items-center">
+                <span className="text-2xl md:text-4xl font-bold text-yellow-900">{timeLeft[interval].toString().padStart(2, '0')}</span>
+                <span className="text-xs uppercase text-yellow-700">{interval}</span>
+            </div>
+        );
+    });
+
+    return (
+        <div className="bg-white/50 backdrop-blur-sm p-4 rounded-2xl shadow-lg border border-yellow-200 text-center">
+            <h3 className="text-lg font-bold text-yellow-800 mb-2 flex items-center justify-center"><Target className="mr-2" /> Exam Countdown</h3>
+            <div className="flex justify-center space-x-4">
+                {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+            </div>
+             <div className="mt-4">
+                <label htmlFor="end-date" className="block text-sm font-medium text-yellow-800 mb-1">Set Exam Date</label>
+                <input
+                    id="end-date"
+                    type="date"
+                    value={endDate.split('T')[0]}
+                    onChange={e => setEndDate(new Date(e.target.value).toISOString())}
+                    className="p-2 border border-yellow-300 rounded-lg bg-white/50 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                />
+            </div>
+        </div>
+    );
+};
+
+const TodoList = () => {
+    const [tasks, setTasks] = useLocalStorage('todo:tasks', []);
+    const [newTask, setNewTask] = useState('');
+
+    useEffect(() => {
+        // Missed-task recovery system
+        const today = new Date().toISOString().split('T')[0];
+        const updatedTasks = tasks.map(task => {
+            if (!task.completed && task.dueDate && task.dueDate < today) {
+                return { ...task, dueDate: today }; // Reschedule to today
+            }
+            return task;
+        });
+        if (JSON.stringify(tasks) !== JSON.stringify(updatedTasks)) {
+            setTasks(updatedTasks);
+        }
+    }, []);
+
+    const addTask = () => {
+        if (newTask.trim() === '') return;
+        const today = new Date().toISOString().split('T')[0];
+        setTasks([...tasks, { id: Date.now(), text: newTask, completed: false, dueDate: today }]);
+        setNewTask('');
+    };
+
+    const toggleTask = (id) => {
+        setTasks(tasks.map(task => task.id === id ? { ...task, completed: !task.completed } : task));
+    };
+    
+    const removeTask = (id) => {
+        setTasks(tasks.filter(task => task.id !== id));
+    };
+
+    return (
+        <div className="bg-white/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-yellow-200">
+            <h3 className="text-xl font-bold text-yellow-800 mb-4 flex items-center"><ListTodo className="mr-2" /> To-Do List</h3>
+            <div className="flex space-x-2 mb-4">
+                <input
+                    type="text"
+                    value={newTask}
+                    onChange={(e) => setNewTask(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && addTask()}
+                    placeholder="Add a new task..."
+                    className="flex-grow p-2 border border-yellow-300 rounded-lg bg-white/50 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                />
+                <button onClick={addTask} className="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-yellow-600 transition-all duration-300">Add</button>
+            </div>
+            <ul className="space-y-2 max-h-60 overflow-y-auto pr-2">
+                {tasks.map(task => (
+                    <li key={task.id} className="flex items-center justify-between bg-white/60 p-3 rounded-lg group">
+                        <span
+                            onClick={() => toggleTask(task.id)}
+                            className={`cursor-pointer flex-grow ${task.completed ? 'line-through text-gray-500' : 'text-gray-800'}`}
+                        >
+                            {task.text}
+                        </span>
+                        <button onClick={() => removeTask(task.id)} className="text-red-500 opacity-0 group-hover:opacity-100 transition-opacity ml-4">
+                           &times;
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+const MarksCalculator = () => {
+    const [mode, setMode] = useState('sectional'); // sectional, mock
+    const [history, setHistory] = useLocalStorage('marks:history', []);
+
+    const SectionalCalculator = () => {
+        const subjects = ['English', 'Current Affairs/GK', 'Legal Reasoning', 'Logical Reasoning', 'Quantitative Techniques'];
+        const [data, setData] = useState(
+            subjects.reduce((acc, subject) => ({ ...acc, [subject]: { total: '', attempted: '', correct: '', wrong: '', time: '' } }), {})
+        );
+        const [results, setResults] = useState(null);
+
+        const calculate = () => {
+            let totalMarks = 0;
+            const newResults = {};
+            subjects.forEach(subject => {
+                const { correct, wrong, time } = data[subject];
+                const marks = (Number(correct) || 0) * 1 - (Number(wrong) || 0) * 0.25;
+                newResults[subject] = { marks };
+                
+                if (correct > 0 && time > 0) {
+                    const timePerCorrect = time / correct;
+                    if (timePerCorrect > 1.5) { // Example threshold: 1.5 mins per correct answer
+                        newResults[subject].feedback = "Good accuracy, but work on your speed.";
+                    } else {
+                        newResults[subject].feedback = "Excellent! Great accuracy and speed.";
+                    }
+                } else {
+                     newResults[subject].feedback = "Enter data to get feedback.";
+                }
+                totalMarks += marks;
+            });
+            newResults.total = totalMarks;
+            setResults(newResults);
+            
+            setHistory([...history, { type: 'sectional', date: new Date().toLocaleDateString(), score: totalMarks, details: data }]);
+        };
+
+        return (
+            <div>
+                {subjects.map(subject => (
+                    <div key={subject} className="grid grid-cols-2 md:grid-cols-5 gap-2 mb-4 p-3 bg-yellow-50 rounded-lg">
+                        <h4 className="col-span-full md:col-span-1 font-semibold text-yellow-800 self-center">{subject}</h4>
+                        <input type="number" placeholder="Attempted" className="p-2 border rounded" onChange={e => setData({...data, [subject]: {...data[subject], attempted: e.target.value}})} />
+                        <input type="number" placeholder="Correct" className="p-2 border rounded" onChange={e => setData({...data, [subject]: {...data[subject], correct: e.target.value}})} />
+                        <input type="number" placeholder="Wrong" className="p-2 border rounded" onChange={e => setData({...data, [subject]: {...data[subject], wrong: e.target.value}})} />
+                        <input type="number" placeholder="Time (min)" className="p-2 border rounded" onChange={e => setData({...data, [subject]: {...data[subject], time: e.target.value}})} />
+                    </div>
+                ))}
+ 
