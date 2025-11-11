@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFGWomen</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset & base */
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body { font-family: 'Open Sans', sans-serif; line-height:1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Colors */
+    :root {
+      --primary-color: #FF6B6B;
+      --secondary-color: #4A90E2;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    /* Header & Nav */
+    header { background: var(--primary-color); color: white; padding: 1rem 2rem; display:flex; justify-content: space-between; align-items:center; flex-wrap: wrap;}
+    header .logo { font-family: var(--font-heading); font-size:1.8rem; font-weight:bold;}
+    nav a { margin-left: 1.5rem; font-weight:bold; }
+    .nav-toggle { display:none; cursor:pointer; }
+
+    /* Hero Section */
+    .hero { background: var(--secondary-color); color: white; text-align:center; padding: 6rem 2rem; }
+    .hero h1 { font-family: var(--font-heading); font-size:2.5rem; margin-bottom:1rem; }
+    .hero p { font-size:1.2rem; margin-bottom:2rem; }
+    .hero .btn { background: var(--primary-color); color:white; padding:0.8rem 1.5rem; border-radius: 25px; font-weight:bold; transition:0.3s; }
+    .hero .btn:hover { box-shadow:0 4px 10px rgba(0,0,0,0.3); }
+
+    /* Section Titles */
+    section { padding:4rem 2rem; }
+    section h2 { font-family: var(--font-heading); font-size:2rem; color: var(--primary-color); margin-bottom:2rem; text-align:center; }
+
+    /* About Section */
+    .about p { max-width: 800px; margin: 0 auto; text-align:center; }
+
+    /* Services */
+    .services { display:flex; flex-wrap:wrap; justify-content: center; gap:2rem; }
+    .service-card { background:#f5f5f5; padding:2rem; border-radius:10px; flex:1 1 250px; max-width:300px; text-align:center; transition:0.3s; }
+    .service-card:hover { box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+    /* Portfolio */
+    .portfolio { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; }
+    .project-card { background:#f5f5f5; padding:1.5rem; border-radius:10px; flex:1 1 250px; max-width:300px; text-align:center; }
+
+    /* Contact */
+    .contact form { max-width:600px; margin:0 auto; display:flex; flex-direction: column; gap:1rem; }
+    .contact input, .contact textarea { padding:0.8rem; border-radius:5px; border:1px solid #ccc; width:100%; }
+    .contact button { background: var(--primary-color); color:white; padding:0.8rem 1.5rem; border-radius:25px; font-weight:bold; border:none; cursor:pointer; transition:0.3s; }
+    .contact button:hover { box-shadow:0 4px 10px rgba(0,0,0,0.3); }
+
+    /* Footer */
+    footer { background:#333; color:white; padding:2rem; text-align:center; }
+    footer a { color:white; margin:0 0.5rem; font-weight:bold; }
+
+    /* Responsive */
+    @media(max-width:768px){
+      nav { display:none; width:100%; margin-top:1rem; flex-direction:column; }
+      nav.active { display:flex; }
+      .nav-toggle { display:block; font-size:1.5rem; }
+      .hero h1 { font-size:2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">AFGWomen</div>
+    <div class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('active')">&#9776;</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Empowering Afghan Women Through Education</h1>
+    <p>Providing online courses, learning materials, and support for Afghan women to achieve their dreams.</p>
+    <a href="#courses" class="btn">Start Learning</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>Who We Are</h2>
+    <p>AFGWomen is a nonprofit initiative dedicated to giving Afghan women access to free online education and resources. We believe that knowledge is power, and every woman deserves the opportunity to learn, grow, and lead. Our mission is to break barriers, provide high-quality educational content, and create a supportive community where Afghan women can thrive.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <h2>What We Offer</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Free Online Courses</h3>
+        <p>Access to a variety of courses in language, business, technology, and life skills.</p>
+      </div>
+      <div class="service-card">
+        <h3>Digital Learning Materials</h3>
+        <p>Free PDFs, videos, and tutorials to enhance your learning experience.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mentorship Programs</h3>
+        <p>Connect with experienced mentors who guide you in your education journey.</p>
+      </div>
+      <div class="service-card">
+        <h3>Community Support</h3>
+        <p>Join a safe and inspiring network of Afghan women learners.</p>
+      </div>
+      <div class="service-card">
+        <h3>Workshops & Webinars</h3>
+        <p>Participate in live online sessions to build skills and confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section" id="portfolio">
+    <h2>Our Work</h2>
+    <div class="portfolio">
+      <div class="project-card">
+        <h3>“Introduction to English” Course</h3>
+        <p>Beginner-friendly video lessons.</p>
+      </div>
+      <div class="project-card">
+        <h3>“Women in Business” Webinar</h3>
+        <p>Inspiring sessions on entrepreneurship.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="text-align:center; margin-top:1rem;">Or email us directly: <a href="mailto:contact@afgwomen.org">contact@afgwomen.org</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="logo">AFGWomen</p>
+    <div>
+      <a href="index.html">Home</a> | 
+      <a href="courses.html">Courses</a> | 
+      <a href="about.html">About</a> | 
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2025 AFGWomen</p>
+  </footer>
+
+  <!-- Optional JS for mobile menu -->
+  <script>
+    // Simple toggle handled in onclick
+  </script>
+
+</body>
+</html>
