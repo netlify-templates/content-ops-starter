@@ -1,74 +1,158 @@
-# Content Ops Starter
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ebook IA – Vendas no TikTok</title>
 
-![Content Ops Starter](https://assets.stackbit.com/docs/content-ops-starter-thumb.png)
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        color: #111;
+    }
 
-Netlify starter that's made for customization with a flexible content model, component library, [visual editing](https://docs.netlify.com/visual-editor/overview/) and [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
+    .container {
+        width: 100%;
+        max-width: 480px;
+        margin: auto;
+        padding: 15px;
+    }
 
-**⚡ View demo:** [https://content-ops-starter.netlify.app/](https://content-ops-starter.netlify.app/)
+    /* HERO */
+    .hero {
+        text-align: center;
+        padding: 25px 10px;
+        background: #f3f6ff;
+        border-radius: 12px;
+    }
 
-## Table of Contents
+    .hero h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        color: #0d47a1;
+    }
 
-- [Deploying to Netlify](#deploying-to-netlify)
-- [Develop with Netlify Visual Editor Locally](#develop-with-netlify-visual-editor-locally)
-- [Building for production](#building-for-production)
-- [Setting Up Algolia Search](#setting-up-algolia-search)
-- [Next Steps](#next-steps)
-- [Support](#support)
+    .hero p {
+        font-size: 16px;
+        color: #444;
+        margin-bottom: 20px;
+    }
 
-## Deploying to Netlify
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 16px;
+        background: #0d47a1;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
 
-If you click "Deploy to Netlify" button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
+    /* BENEFÍCIOS */
+    .benefit-box {
+        padding: 18px;
+        background: #eef1fa;
+        border: 1px solid #d9deef;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/content-ops-starter)
+    .benefit-box h3 {
+        margin: 0 0 8px 0;
+        color: #0d47a1;
+        font-size: 18px;
+    }
 
-## Develop with Netlify Visual Editor Locally
+    .benefit-box p {
+        margin: 0;
+        font-size: 14px;
+        color: #444;
+    }
 
-The typical development process is to begin by working locally. Clone this repository, then run `npm install` in its root directory.
+    /* CTA FINAL */
+    .final {
+        text-align: center;
+        margin-top: 35px;
+    }
 
-Run the Next.js development server:
+    .final h2 {
+        font-size: 22px;
+        color: #0d47a1;
+        margin-bottom: 10px;
+    }
 
-```txt
-cd content-ops-starter
-npm run dev
-```
+    .final p {
+        color: #555;
+        font-size: 15px;
+    }
 
-Install the [Netlify Visual Editor CLI](https://www.npmjs.com/package/@stackbit/cli). Then open a new terminal window in the same project directory and run the Netlify visual editor dev server:
+    footer {
+        margin-top: 40px;
+        text-align: center;
+        padding: 15px;
+        background: #0d47a1;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+</style>
+</head>
 
-```txt
-npm install -g @stackbit/cli
-stackbit dev
-```
+<body>
 
-This outputs your own Netlify visual editor URL. Open this, register, or sign in, and you will be directed to Netlify's visual editor for your new project.
+<div class="container">
 
-![Next.js Dev + Visual Editor Dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
+    <!-- HERO -->
+    <div class="hero">
+        <h1>Use IA Para Vender Muito Mais no TikTok</h1>
+        <p>Aprenda como empresários estão a multiplicar as vendas usando Inteligência Artificial — mesmo sem experiência.</p>
+        <a href="https://go.hotmart.com/G103304492N" target="_blank" class="btn">Quero o Ebook Agora</a>
+    </div>
 
-## Building for production
+    <!-- BENEFÍCIOS -->
+    <h2 style="margin-top: 28px; font-size:20px;">O Que Vai Aprender</h2>
 
-To build a static site for production, run the following command
+    <div class="benefit-box">
+        <h3>✔ Anúncios prontos para TikTok</h3>
+        <p>Criar vídeos e textos persuasivos em poucos minutos usando IA.</p>
+    </div>
 
-```shell
-npm run build
-```
+    <div class="benefit-box">
+        <h3>✔ Estratégias de vendas testadas</h3>
+        <p>Métodos comprovados que funcionam em 2025.</p>
+    </div>
 
-## Setting Up Algolia Search
+    <div class="benefit-box">
+        <h3>✔ Automatização de conteúdos</h3>
+        <p>Produza 10x mais conteúdo com menos esforço.</p>
+    </div>
 
-This starter includes Algolia search integration. To set it up:
+    <div class="benefit-box">
+        <h3>✔ Prompts profissionais</h3>
+        <p>Copie e cole para gerar copy, roteiros e ideias ilimitadas.</p>
+    </div>
 
-1. Create an [Algolia](https://www.algolia.com/) account
-2. Create a new application and index
-3. Set the following environment variables:
-   - `NEXT_PUBLIC_ALGOLIA_APP_ID` - Your Algolia application ID
-   - `NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY` - Your Algolia search-only API key
-   - `NEXT_PUBLIC_ALGOLIA_INDEX_NAME` - Your index name
+    <!-- CTA FINAL -->
+    <div class="final">
+        <h2>Aumente as Suas Vendas Hoje</h2>
+        <p>Aproveite o poder da Inteligência Artificial e fique à frente da concorrência.</p>
 
-## Next Steps
+        <a href="https://go.hotmart.com/G103304492N" target="_blank" class="btn">Comprar Agora</a>
+    </div>
 
-Here are a few suggestions on what to do next if you're new to Netlify visual editor:
+    <footer>
+        © 2025 — IA Boost Portugal  
+    </footer>
 
-- Learn [Netlify visual editor overview](https://docs.netlify.com/visual-editor/visual-editing/)
-- Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
+</div>
 
-## Support
-
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+</body>
+</html>
